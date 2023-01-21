@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&family=Rubik+Distressed&family=Rubik+Microbe&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,300;1,400&family=Ubuntu:wght@700&family=Work+Sans:wght@200;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgba(255, 217, 0, 0.781);
+}
+/* COMENCE A DAR ESTILOS AL HEADER DE INDEX*/
+header {
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+}
+.nav{
+    height: 90px;
+}
+.navbar {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content:flex-end;
+    gap: 20px;
+    list-style: none;
+    margin-right: 20px;
+}
+.navbar li a{
+    text-decoration: none;
+    color:white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar li a:hover{
+    color: red;
+}
+a {
+    color:white;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+
+}
+.logo.img{
+    background-color: aquamarine;
+    color:white;
+    width: 50px;
+}
+a:link {
+    background-color:darkgoldenrod;
+    color: cadetblue;
+}
+/* fuentes letras
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik Distressed', cursive;
+    font-family: 'Rubik Microbe', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif; */
+
+/* TERMINE DE DARLE ESTILOS A EL HEADER */
+main{
+    width: 100%;
+    height: 140vh;
+}
+h1{
+    text-align: center;
+    margin: 10px;
+    color:white;
+    font-weight:500px;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;;
+}
+.containere-grid{
+    display: grid;
+    width: 100%;
+    height: 500px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:repeat(5, 1fr);
+    grid-template-areas:
+    "item1 item1 item1 item1"
+    "item1 item1 item1 item1"
+    "item1 item1 item1 item1"
+    "item2 item2 item2 item2"
+    "item2 item2 item2 item2"
+    ;
+}
+.item1 {
+    grid-area: item1;
+    display:flex;
+    width: 100%;
+    height: 100%;
+}
+.item1 img{
+    flex-direction: rigth;
+    margin: 20px;
+
+}
+.item1 text{  
+    flex-direction: left;
+    color:white;
+    text-align: justify;
+    font-size: 30px;
+    font-weight: 50px;
+    font-family:'Roboto', sans-serif;
+    margin: 30px;
+}
+.text h2{
+    color: white;
+    margin: 30px;
+    font-size: 40px;
+    font-weight:600px;
+    font-family:'Roboto', sans-serif; 
+}
+.text h4{
+    margin: 10px;
+}
+
+.item1 h4{
+    text-align: justify;
+    font-size: 30px;
+    font: weight 50px; ;
+    font-family:'Rubik Distressed', cursive;
+    color:white;
+    }
+.item2 {
+    grid-area: item2;
+    width: 100%;
+    height: 100%;
+    margin: 30px;
+
+} 
+
+/* COMENCE A DARLE ESTILOS A EL FOOTER DEL INDEX*/
+.datos{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.datos h2{
+    color:white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif; 
+    margin: 20px;
+
+}
+.datos p{
+    color:white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif; 
+    margin-top: 12px;
+    margin-right: 10px;
+}
+.redes-sociales{
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 20px;
+    margin-bottom: 100px;
+}
+/* INICIE DARLE ESTILOS A EL HEADER DE INICIO  */
+body{
+    background-color: coral;
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+}
+.nav{
+    height: 90px;
+}
+.navbar {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content:flex-end;
+    gap: 20px;
+    list-style: none;
+    margin-right: 30px;
+}
+.navbar li a{
+    text-decoration: none;
+    color: white;
+}
+.logo.img{
+    background-color: aquamarine;
+    color:white;
+    width: 50px;}
+main{
+    width: 100%;
+}
+.container-.grid{
+    display:grid;
+    width: 100%;
+    height: 200%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+    "titulo titulo titulo imagen"
+    "parrafo parrafo parrafo imagen"
+    "parrafo parrafo parrafo imagen"
+    "parrafo parrafo parrafo imagen2"
+    "parrafo parrafo parrafo imagen2"
+;
+}
+.titulo {
+    grid-area: titulo;
+    color:white;
+}
+.titulo h2{
+    color:white;
+    margin:20px;
+    font-size: 30px;
+    font-family:'Ubuntu', sans-serif;
+}
+.container.grid{
+    display: flex;
+}
+.parrafo p{
+    grid-area: parrafo;
+    margin: 10px;
+    font-size: 20px;
+    font-family: 'Rubik Distressed', cursive;
+    flex-direction: rigth;
+}
+.imagen p{
+    color: white;
+}
+.imagen {
+    grid-area: imagen;
+    margin-left: 10px;
+    flex-direction: left;
+}
+.imagen2  img{
+    grid-area: imagen2;
+    margin: 10px;
+    flex-direction: rigth;
+}
+/* COMENCE A DARLE ESTILOS A EL FOOTER DE INICIO */
+
+.datos{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+} 
+.datos h2{
+    color:white;
+    margin: 10px;
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.datos p{
+    color:white;
+    margin: 10px;
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.redes-sociales{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 10px;
+}
+/* LE DI ESTILOS A LA PAGINA DE INICIO DE PRODUCTOS */
+body{
+    background-color: rgba(255, 217, 0, 0.781);
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+}
+.nav{
+    width: 90%;
+}
+.navbar{
+display:flex;
+justify-content: flex-end;
+gap: 20px;
+list-style: none;
+}
+.navbar li a{
+text-decoration: none;
+color: white;
+}
+.logo.img{
+background-color: aquamarine;
+color:white;
+width: 50px;
+}
+main{
+width: 100%;
+}
+.subtitulo h2{
+    color: white;
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgba(204, 176, 19, 0.767);
+}
+.navbar li a{
+    text-decoration: none;
+    color:white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 20px;
+}
+.navbar li a:hover{
+    color: red;
+}
+a {
+    color:white;
+    text-decoration: none;
+}
+.logo a{
+    color: white;
+}
+li {
+    list-style: none;
+}
+.logo.img{
+    color:white;
+    width: 50px;
+}
+a:link {
+    background-color:darkgoldenrod;
+    color: cadetblue;
+}
+/* LE DI ESTILOS A EL MAIN DE PRODUCTOS */
+
+main{
+    width: 100%;
+}
+.container-grid{
+    display:grid;
+    width: 100%;
+    height: 50px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas:
+
+    "none titulo titulo none"
+    "none subtiutlo subtitulo none"
+    "card card card card"
+    "card card card card"
+    ;
+}
+.titulo h1{
+grid-area: titulo;
+background-color: black;
+}
+.subtitulo h2{
+grid-area: subtitulo;
+background-color: darkorange;
+}
+.card{
+    grid-area: card;
+    background-color:black;
+    width: 300%;
+    flex-direction:center;
+}
+.mas{
+    background-color:darkorange;
+    width: 100%;
+}
+.container-grid{
+display: flex;
+}
+/* LE DI ESTILOS A EL FOOTER DE PRODUCTOS  */
+.datos{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+} 
+.datos h2{
+    color:white;
+    margin: 10px;
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}.datos p{
+    color:white;
+    margin: 10px;
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.redes-sociales{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 10px;
+}
+/* LE DI ESTILOS A EL HEADER DE CONCEJOS*/
+header {
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+}
+.titulo{
+    display: flex;
+    margin-right: 800px;
+}
+.titulo img{
+    direction: rigth;
+   
+}
+.titulo a{  
+    color: white;
+    flex-direction: rigth;
+}
+.nav{
+    width: 90%;
+}
+.navbar{
+    width: 100%;
+    display:flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+    margin-right: 20px;
+}
+.navbar li a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar li a:hover{
+    color: red;
+} 
+.carrito img{
+    margin: 30px;
+
+}
+a{
+    color: white; 
+    
+}
+li{ 
+    list-style:none;
+}
+.logo img{
+    color:white;
+    width: 50px;
+}
+/* COMENCE A DARLE ESTILOS A EL MAIN DE CONCEJOS */
+body{
+    background-color: rgb(214, 176, 70);
+}
+h1{
+    text-align:center;
+    color:white;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+.nut h2{
+    color:white;
+    margin:20px;
+    font-size: 30px;
+    font-family:'Roboto', sans-serif;
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+.conatiner-grid{
+    display:grid;
+    width: 100%;
+    height: 200%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+
+    "nut nut nut nut"
+    "img img img img"
+    "concejos concejos concejos"
+    "concejos concejos concejos"
+    ;
+}
+.nut{
+    grid-area: nut;
+    font-size: 30px;
+}
+.prof img{
+    grid-area: img;
+    flex-direction: left;
+
+}
+.concejos{
+    grid-area: concejos;
+    flex-direction: left;
+    color: white;
+}
+.container-.grid{
+    display: flex;
+}
+.prof p{
+    color: white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+}
+.concejos p{
+    font-size: 30px;
+    font-family:'Rubik Distressed', cursive ;
+}
+.prof h2{
+    flex-direction: rigth;
+    color: white;
+}
+/* LE DI ESTILOS A EL FOOTER DE CONCEJOS */
+.datos{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+} 
+.datos h2{
+    color:white;
+    margin: 10px;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+.datos p{
+    color:white;
+    margin: 10px;
+    font-size: 30px;
+    font-family:'Roboto', sans-serif;
+}
+.redes-sociales{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 10px;
+}
+/* ESTILOS A EL HEADER DE CONTACTOS */
+header{
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+}
+.nav{
+    width: 90%;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none; 
+    margin-right: 20px;
+}
+.navbar li a{
+    text-decoration: none;
+    color:white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar li a:hover{
+    color: red;
+}
+a{
+    color:white;
+}
+li{
+list-style: none;
+}
+.logo.img{
+    color:white;
+    width: 50px;
+} 
+/* LE DI ESTILOS A EL MAIN */
+main{
+    width:100%;
+    height:100vh;
+}
+h2{
+    color: white;
+    text-align:left;
+}
+.containere-grid{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:repeat(6, 1fr);
+    grid-template-areas:
+
+    "cuest cuest cuesti cuest"
+    "cuest cuest cuest cuest"
+    "cuest cuest cuest cuest"
+    "mapa  mapa mapa mapa"
+    "mapa  mapa mapa mapa"
+    "mapa  mapa mapa mapa"
+    ;
+}
+    .cuest{
+        grid-area: cuest;
+
+    }
+    .mapa{
+        grid-area: mapa;
+    }
+    .container-grid{
+        display: flex;
+    }
+    .cuest{
+        flex-direction: rigth;
+    }
+    .mapa{
+        flex-direction: left;
+    }
+    .datos{
+        display: flex;
+        gap: 20px;
+        list-style: none;
+    } 
+    .datos h2{
+        color:white;
+        margin: 10px;
+        font-size: 30px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .datos p{
+        color:white;
+        margin: 5px;
+        font-size: 30px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .redes-sociales{
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        margin-right: 10px;
+    }
