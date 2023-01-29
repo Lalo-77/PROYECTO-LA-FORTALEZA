@@ -9,10 +9,6 @@ body{
 
     background-image: url(../assets/img/castillofenestrelle.jpg);
 }
-body{
-    width: 100px;
-    height: 100vh;
-}
 /* COMENCE A DAR ESTILOS AL HEADER DE INDEX*/
 header {
     display: grid;
@@ -20,20 +16,27 @@ header {
     height: 100%;
     justify-content:flex-end;
 }
-.navbar{
+main{
+    width: 100%;
+    height: 1700px;
+}
+.navBar{
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
     list-style: none;
+    gap: 20px;
     padding-left: 20px;
 }
-.navbar li a{
+.nav{
+    width: 90%;
+}
+.navBar li a{
 text-decoration: none;
 color: white;
 font-size: 30px;
 font-family: 'Roboto', sans-serif;
 }
-.navbar li a:hover{
+.navBar li a:hover{
     color: red;
 }
 a {
@@ -44,21 +47,20 @@ li {
     list-style: none;
 }
 .logo img{
-    color:white;
+    color:white; 
     width: 50px ;
     height: 70px;
 }
 .logo a{
     color: white;
 }
-.navbar img{
+.navBar img{
     margin-right: 5px;
 }
 /* TERMINE DE DARLE ESTILOS A EL HEADER DE EL INDEX*/
 .container-grid{
     display: grid;
-    width: 100%;
-    height: 1700px;
+    height: 100%;
     gap: 20px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows:repeat(5, 1fr);
@@ -71,22 +73,21 @@ li {
 
 }
 .encab{
-    grid: encab;
+    grid-area: encab;
     display: flex;
     background-color:rgba(209, 223, 19, 0.959);
     width: 1700px;
-    height: 100px;
-
+    height: 70px;
 }
 .titulo{
     grid-area: titulo;
     height: 70px;
-    width: 1600px;
+    width: 1700px;
 }
 .titulo h1{
     text-align:center;
     color:white;
-    font-weight:100%;
+    font-weight:80px;
     font-size: 80px;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 20px;
@@ -96,7 +97,7 @@ li {
     grid-area: medio;
     display: flex;
     flex-direction: row;
-    width: 1500px;
+    width: 1600px;
     height: 500px;
 }
 .medio p{
@@ -108,18 +109,19 @@ flex-direction: rigth;
 }
 .principal img{
 flex-direction: rigth;
-border-radius: 30px;
-width: 500px;
+border-radius: 50px;
+width: 600px;
 height: 100%;
 }
 .principal-texto{
     flex-direction: left;
+    font-weight: 50px;
+    font-size: 40px;
     padding: 30px;
     border-left: 50px;
-    width: 500px;
+    width: 600px;
     height: 100% ;
 }
-
 .principal h2{
     flex-direction: left;
     font-weight: 50px;
@@ -127,21 +129,23 @@ height: 100%;
     font-family: 'Roboto', sans-serif;
     border-left: 30px ;
     color: white;
-    background-color:limegreen;
+    margin-left: 20px;
+    background-color:rgba(195, 207, 23, 0.959);
 }
 .principal h4{
     flex-direction: left;
     font-family: 'Rubik Distressed', cursive;
+    font-weight: 40px;
+    font-size: 20px;
     color: white;
-    font-weight: 60px;
-    font-size: 40px;
+    background-color:rgba(195, 207, 23, 0.959);
     text-align: start;
     margin-left: 20px;
 }
 .container{
     grid-area: container;
     align-items: center;
-    width: 600px;
+    width: 500px;
     height: 500px;
     margin-left: 20%;
 }
@@ -163,10 +167,13 @@ height: 100%;
     background-color: rgba(209, 223, 19, 0.959);
 }
 .datos h2{
+    display: flex;
     color: white;
-    font-size: 30px;
-    font-family: 'Roboto', sans-serref;
-    margin: 20px;
+    gap: 20px;
+    list-style: none;
+    width: 1700px;
+    height: 70px;
+    background-color: rgba(209, 223, 19, 0.959);
 }
 .datos p{
     color:white;
@@ -183,7 +190,53 @@ height: 100%;
     margin-top: 20px;
     margin-right: 30px;
 }
-/* COMENCE A DAR ESTILOS AL HEADER DE INICIO*/
+@media(max-width:768px) {
+header.encab {
+        background-color: cyan;
+    }
+
+.logo a {
+        color: cornflowerblue;
+    }
+
+ul.navbar li a {
+        color: cornflowerblue;
+        font-size: 20px;
+
+    }
+
+section.titulo h1 {
+        color: darkblue;
+
+    }
+
+ul.navbar li a:hover {
+        color: gold;
+    }
+ul.navbar{
+    flex-direction: column;
+    align-items: center;
+ }
+ h1{
+    color:black;
+    font-size: 30px;
+ }
+.container-grid{
+    display: grid;
+    width: 100%;
+    height: 1700px;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-rows: repeat(5 1fr);
+    grid-template-areas:
+    "encab encab encab encab"
+    "titulo titulo titulo titulo"
+    "medio medio medio medio"
+    "container container container container"
+    "pie pie pie pie"
+    ;
+}
+}
+/* COMENCE A DAR ESTILOS AL HEADER DE MISION*/
 header {
     display: grid;
     width: 100%;
@@ -223,7 +276,7 @@ li {
 .navbar img{
     margin-right: 5px;
 }
-/* TERMINE DE DARLE ESTILOS A EL HEADER DE INICIO*/
+/* TERMINE DE DARLE ESTILOS A EL HEADER DE MISION*/
 .container-grid{
     display: grid;
     width: 100%;
@@ -259,11 +312,11 @@ margin: 5px;
     height: 70px;
     width: 1700px;
 }
-.titulo h1{
+.titulo h2{
     text-align:center;
     color:white;
     font-weight:100%;
-    font-size: 80px;
+    font-size: 70px;
     font-family: 'Roboto', sans-serif;
     margin-left: 100px;
 }
@@ -272,8 +325,8 @@ margin: 5px;
     grid-area: medio;
     display: flex;
     flex-direction: row;
-    width: 1500px;
-    height: 500px;
+    width: 1700px;
+    height: 1000px;
 }
 .medio p{
 flex-direction: rigth;
@@ -284,9 +337,10 @@ flex-direction: rigth;
 }
 .principal img{
 flex-direction: rigth;
-border-radius: 30px;
-width: 500px;
-height:100%;
+border-radius: 50px;
+margin-left: 20px;
+width: 400px;
+height:400px;
 }
 .principal-texto{
     flex-direction: left;
@@ -295,23 +349,27 @@ height:100%;
     width: 500px;
     height: 100%;
 }
-.principal h2{
+.principal h3{
     flex-direction: left;
     font-weight: 50px;
     font-size: 40px;
     font-family: 'Roboto', sans-serif;
     border-left: 30px;
     color:white;
-    background-color:limegreen;
+    background-color:rgba(195, 207, 23, 0.959);
+    margin-top: 30px;
+    margin-left: 20px;
 }
 .principal h4{
     flex-direction: left;
     font-family: 'Rubik Distressed', cursive;
     color: white;
     font-weight: 50px;
-    font-size: 30px;
+    font-size: 40px;
     text-align: start;
     margin-left: 20px;
+    margin-top: 20px;
+    background-color: rgba(195, 207, 23, 0.959);;
 }
 .container{
     grid-area: container;
@@ -326,7 +384,7 @@ height:100%;
     height: 70px;
     border-bottom: 20px;
 }
-/* COMENCE A DARLE ESTILOS A EL FOOTER DE INICIO*/
+/* COMENCE A DARLE ESTILOS A EL FOOTER DE MISION*/
 .datos{
     display: flex;
     color: white;
@@ -507,7 +565,7 @@ color: white;
     gap: 20px;
     list-style: none;
     width: 1700px;
-    height: 50px;
+    height: 70px;
 }
 .datos h2{
     color:white;
@@ -541,19 +599,19 @@ header {
     width: 90%;
 }
 .navbar{
-    display:flex;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    display:flex;
     justify-content: flex-end;
-    gap: 20px;
     list-style: none;
+    color: white;
+    gap: 20px;
 }
     .navbar li a{
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 30px;
-    font-family: 'Roboto', sans-serif;
-    align-items: flex-start;
 }
 .navbar li a:hover{
     color: red;
@@ -565,123 +623,125 @@ a {
 li {
     list-style: none;
 }
-.logo.img{
+.escudo img{
+    align-items:flex-start;
     color:white;
     margin: 20px;
+    width: 40px ;
+    height: 40px;
 }
-.header{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-.logo a{
-    color: white;
+.escudo a{
+    color:white;
 }
 /* LE DI ESTILOS A EL MAIN DE PRODUCTOS */
- main{
-    width: 100%;
+.mai{
+    width: 1700px;
+    height: 2000px;
 }
-.grupo{
-    display:grid;
-    width: 100%;
+.grupo-grid{
+    display: grid;
+    width: 1700px;
     height: 100vh;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 70px 70px 70px 300px 300px);
     grid-template-areas:
-
     "principio principio principio principio"
     "tit tit tit tit"
+    "tit-d tit-d  tit-d tit-d"
     "mai mai mai mai"
     "pat pat pat pat"
     ;
 }
 .principio{
     grid-area: principio;
+    display: flex;
+    background-color: rgba(209, 223, 19, 0.959);
+    width: 1700px;
+    height: 70px;
 }
-.tit{
+.tit{ 
     grid-area: tit;
+    width: 1700px;
+    height: 70px; 
+    display: flex;
+}
+.tit-d{
+    grid-area: tit-d;
+
 }
 .mai{
     grid-area: mai;
-}
-.pat{
-    grid-area: pat;
-}
-.principio{
-    height: 100px;
-    width: 100%;
+    background-color: black;
+    align-content: center;
+    margin-left: 120px;
 }
 .tit h1{
 background-color: black;
-text-align: center;
+text-align:center;
 color: white;
 font-weight: 40px;
 font-size: 50px;
 font-family: 'Roboto', sans-serif;
 }
-.subtitulo h2{
-background-color: darkorange;
-}
-.subtitulo h2{
+.tit-d h2{
     color: white;
-    text-align:start;
+    text-align:center;
     font-weight: 50px;
     font-size: 40px;
     font-family: 'Roboto', sans-serif;
+    background-color: darkorange;
+    width: 1700px;
+    height: 70px;
 }
-.mai-container{
-    background-color:black;
-    width: 300%;
-    flex-direction:center;
+.pat{
+  grid-area: pat; 
+}
+.contenedor{
+    margin-bottom: 20px;
+    width: 100px;
+    height: 70px;
 }
 .mas h3{
-    background-color:darkorange;
-    width: 100%;
-    height: 100%;
+    background-color: darkorange;
+    color: white;
+    width: 1700px;
+    height: 70px;
 }
-.grupo{
-display: flex;
-} 
 /* LE DI ESTILOS A EL FOOTER DE PRODUCTOS  */
 .datos{
     display: flex;
+    justify-content:space-around ;
     gap: 20px;
     list-style: none;
+    width: 100%;
+    height: 70px;
 }
 .datos h2{
     color:white;
+    background-color:rgba(209, 223, 19, 0.959);
     margin: 10px;
     font-size: 30px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }.datos p{
     color:white;
+    background-color:rgba(209, 223, 19, 0.959);
     margin: 10px;
     font-size: 30px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family:'Roboto', sans-serif;
 }
 .redes-sociales{
     display: flex;
     justify-content: flex-end;
     list-style: none;
-    margin-right: 10px;
+    background-color:rgba(209, 223, 19, 0.959);
+    margin-right: 30px;
 } 
 /* LE DI ESTILOS A EL HEADER DE CONCEJOS*/
-/* header {
-    width: 100%;
+header {
     display: grid;
+    width: 100%;
+    height: 100%;
     justify-content:flex-end;
-}
-.titulo{
-    display: flex;
-    margin-right: 800px;
-}
-.titulo img{
-    direction: rigth;
-
-}
-.titulo a{
-    color: white;
-    flex-direction: rigth;
 }
 .nav{
     width: 90%;
@@ -693,34 +753,40 @@ display: flex;
     justify-content: flex-end;
     gap: 20px;
     list-style: none;
-    margin-right: 20px;
 }
 .navbar li a{
     text-decoration: none;
     color: white;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
+    font-size: 30px;
 }
 .navbar li a:hover{
     color: red;
 }
 .carrito img{
     margin: 30px;
-
 }
 a{
     color: white;
-
+    text-decoration: none;
 }
 li{
     list-style:none;
 }
-.logo img{
-    color:white;
-    width: 50px;
-}  */
+.titulo{
+    display: flex;
+    margin-right: 800px;
+}
+.titulo img{
+    direction: rigth;
+}
+.titulo a{
+    color: white;
+    flex-direction: rigth;
+}
 /* COMENCE A DARLE ESTILOS A EL MAIN DE CONCEJOS */
- /* h1{
+h1{
     text-align:center;
     color:white;
     font-size: 40px;
@@ -736,35 +802,56 @@ main{
     width: 100%;
     height: 100%;
 }
- .container-grid{
+.contador{
     display:grid;
     width: 100%;
-    height: 200%;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr );
+    grid-template-rows: repeat(6, 1fr);
     grid-template-areas:
 
-    "nut nut nut nut"
-    "img img img img"
-    "concejos concejos concejos"
-    "concejos concejos concejos"
+    "bnav bnav bnav bnav"
+    "none tt tt none"
+    "prof prof prof ima"
+    "consejos concejos ima2"
+    "concejos concejos ima2"
+    "foot foot foot foot"
     ;
 }
-.nut{
-    grid-area: nut;
+.bnav{
+    background-color:rgba(209, 223, 19, 0.959); 
+    display: flex;
+    grid-area: bnav;
     font-size: 30px;
+    width: 1700px;
+    height: 70px;
 }
-.prof img{
-    grid-area: img;
+.tt{
+    grid-area:tt;
+    height: 70px;
+    width: 1600px;
+}
+.prof{
+    grid-area: prof;
     flex-direction: left;
 
+}
+.ima1{
+    grid-area:ima;
 }
 .concejos{
     grid-area: concejos;
     flex-direction: left;
     color: white;
 }
-.container-.grid{
+.foot{
+    grid-area: foot;
+}
+
+.ima2{
+    grid-area:ima2;
+}
+.contador{
     display: flex;
 }
 .prof p{
@@ -780,9 +867,9 @@ main{
 .prof h2{
     flex-direction: rigth;
     color: white;
-}  */
+}  
 /* LE DI ESTILOS A EL FOOTER DE CONCEJOS */
-/* .datos{
+.datos{
     display: flex;
     gap: 20px;
     list-style: none;
@@ -804,33 +891,39 @@ main{
     justify-content: flex-end;
     list-style: none;
     margin-right: 10px;
-} */
+}
 /* ESTILOS A EL HEADER DE CONTACTOS */
-/* header{
+body{
     width: 100%;
+    height: 100vh;
+}
+header{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content:flex-end;
 }
 .nav{
     width: 90%;
 }
-.navbar{
-    width: 100%;
-    height: auto;
+.navBar{
     display: flex;
     justify-content: flex-end;
     gap: 20px;
     list-style: none;
     margin-right: 20px;
 }
-.navbar li a{
+.navBar li a{
     text-decoration: none;
     color:white;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
 }
-.navbar li a:hover{
+.navBar li a:hover{
     color: red;
+}
+.carrito img{
+    margin:30px;
 }
 a{
     color:white;
@@ -841,47 +934,75 @@ list-style: none;
 .logo.img{
     color:white;
     width: 50px;
-}  */
+} 
 /* LE DI ESTILOS A EL MAIN DE CONTACTOS*/
-/* main{
-    width:100%;
-    height:100vh;
+main{
+    width:100px;
+    height:100px;
 }
 h2{
     color: white;
     text-align:left;
-}  */
-/* .container-grid{
+    width: 1700px;
+    height: 70px ;
+} 
+.inter {
+    width: 50px;
+    height: 50px;
+}
+.relac{
     display: grid;
     width: 100%;
-    height: 100%;
+    height: 1700px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows:repeat(4, 1fr);
+    grid-template-rows:repeat(5, 1fr);
     grid-template-areas:
 
-    "cuest cuest cuesti cuest"
-    "cuest cuest cuest cuest"
-    "cuest cuest cuest cuest"
-    "mapa  mapa mapa mapa"
-    "mapa  mapa mapa mapa"
-    "mapa  mapa mapa mapa"
+    "pag pag pag pag"
+    "titu titu titu titu"
+    "medi medi medi medi"
+    "medi medi medi medi"
+    "ult ult ult ult"
     ;
-}   */
-/* .cuest{
-        grid-area: cuest;
-
+}  
+    header{
+    display: grid;
+    width: 100%;
+    height: 500vh;
+    justify-content: flex-end;
+}
+    .pag{
+        grid-area: pag;
+        display: flex;
+        width: 1700px;
+        height: 70px;
+        background-color:rgba(209, 223, 19, 0.959);
     }
-    .mapa{
-        grid-area: mapa;
-    }
-    .container-grid{
+    .medi{
+        grid-area: med;
         display: grid;
     }
+    .ubic{
+        grid-area: mapa;
+    }
+    .ult{
+        grid-area: ult;
+        width: 1700px;
+        height: 70px;
+    }
+    .medi{
+    display: flex;
+    flex-direction: row;
+    width: 1700px;
+    height: 70px;
+    }
     .cuest{
-        flex-direction: rigth;
+        display: flex;
+        flex-direction: left;
     }
     .mapa{
-        flex-direction: left;
+        display: flex;
+        flex-direction: rigth;
     }
     .datos{
         display: flex;
@@ -905,4 +1026,4 @@ h2{
         justify-content: flex-end;
         list-style: none;
         margin-right: 10px;
-    }    */
+    }   

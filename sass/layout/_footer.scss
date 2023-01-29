@@ -1,0 +1,45 @@
+.pie{
+    grid-area: abajo;
+    display: flex;
+    border-bottom: 20px;
+    width: 1700px;
+    height: 70px;
+
+        .datos{
+            display: flex;
+            color: white;
+            gap: 20px;
+            list-style: none;
+            width: 1700px;
+            height: 70px;
+            background-color: rgba(209, 223, 19, 0.959);  
+    }
+
+    .datos h2{
+        display: flex;
+        color: white;
+        gap: 20px;
+        list-style: none;
+        width: 1700px;
+        height: 70px;
+        background-color: rgba(209, 223, 19, 0.959);
+    }
+
+        .datos p{
+            color:white;
+            margin: 10px;
+            font-size: 30px;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 10px;
+            margin-right: 10px;
+            background-color: rgba(209, 223, 19, 0.959);
+        }
+        .redes-sociales a{
+            justify-content: flex-end;
+            list-style: none;
+            background-color: rgba(209, 223, 19, 0.959);
+            margin-top: 20px;
+            margin-right: 30px;
+        }
+
+} 

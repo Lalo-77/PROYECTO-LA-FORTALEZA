@@ -1,0 +1,41 @@
+header{ 
+    background-color: rgba(209, 223, 19, 0.959);
+    justify-content: flex-end;
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    .logo img{
+        width: 50px;
+        height: 50px;
+        margin-left: 30px;
+    }
+        a{
+            color: white;
+            list-style: none;
+        }
+    }
+.navBar{
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        gap: 20px;
+        padding-left: 20px;
+
+            img{ margin-right: 5px;
+                background-color:rgba(209, 223, 19, 0.959); 
+        }
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            color:white;
+            font-size: 30px;
+            font-family:$typo-principal;
+
+            &:hover{
+                color: red;
+            }
+        }
+    }
+}
