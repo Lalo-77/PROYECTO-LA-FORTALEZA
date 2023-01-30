@@ -3,10 +3,13 @@
 {
     margin: 0;
     padding: 0;
-    box-sizing:border-box
+    box-sizing:border-box;
+}
+html{
+    height:100%;
 }
 body{
-
+    min-height: 100%;
     background-image: url(../assets/img/castillofenestrelle.jpg);
 }
 /* COMENCE A DAR ESTILOS AL HEADER DE INDEX*/
@@ -26,6 +29,8 @@ main{
     list-style: none;
     gap: 20px;
     padding-left: 20px;
+    width: 100%;
+    height: 50px;
 }
 .nav{
     width: 90%;
@@ -35,6 +40,7 @@ text-decoration: none;
 color: white;
 font-size: 30px;
 font-family: 'Roboto', sans-serif;
+align-items: flex-start;
 }
 .navBar li a:hover{
     color: red;
@@ -48,16 +54,17 @@ li {
 }
 .logo img{
     color:white; 
-    width: 50px ;
-    height: 70px;
 }
 .logo a{
     color: white;
 }
 .navBar img{
     margin-right: 5px;
+    width: 30px;
+    height: 30px;
 }
 /* TERMINE DE DARLE ESTILOS A EL HEADER DE EL INDEX*/
+/* COMENCE A DARLE ESTILOS A EL MAIN DE EL INDEX*/
 .container-grid{
     display: grid;
     height: 100%;
@@ -70,7 +77,6 @@ li {
     "medio medio medio medio"
     "container container container container"
     "pie pie pie pie"
-
 }
 .encab{
     grid-area: encab;
@@ -87,33 +93,31 @@ li {
 .titulo h1{
     text-align:center;
     color:white;
-    font-weight:80px;
-    font-size: 80px;
+    font-weight:70px;
+    font-size: 70px;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 20px;
 }
-/* COMENCE A DARLE ESTILOS A EL MAIN */
 .medio{
     grid-area: medio;
     display: flex;
-    flex-direction: row;
     width: 1600px;
     height: 500px;
 }
 .medio p{
 flex-direction: rigth;
 }
-.principal{
+.imagen{
     display: flex;
     flex-direction: row;
 }
-.principal img{
+.img{
 flex-direction: rigth;
 border-radius: 50px;
-width: 600px;
-height: 100%;
+width: 500px;
+height: 400px;
 }
-.principal-texto{
+.imagen-texto{
     flex-direction: left;
     font-weight: 50px;
     font-size: 40px;
@@ -122,7 +126,7 @@ height: 100%;
     width: 600px;
     height: 100% ;
 }
-.principal h2{
+.texto h2{
     flex-direction: left;
     font-weight: 50px;
     font-size: 50px;
@@ -132,7 +136,7 @@ height: 100%;
     margin-left: 20px;
     background-color:rgba(195, 207, 23, 0.959);
 }
-.principal h4{
+.texto h4{
     flex-direction: left;
     font-family: 'Rubik Distressed', cursive;
     font-weight: 40px;
@@ -169,7 +173,9 @@ height: 100%;
 .datos h2{
     display: flex;
     color: white;
+    margin: 10px;
     gap: 20px;
+    font-size: 30px;
     list-style: none;
     width: 1700px;
     height: 70px;
@@ -182,6 +188,7 @@ height: 100%;
     font-family: 'Roboto', sans-serif;
     margin-top: 10px;
     margin-right: 10px;
+    background-color: rgba(209, 223, 19, 0.959);
 }
 .redes-sociales a{
     justify-content: flex-end;
@@ -223,6 +230,7 @@ ul.navbar{
  }
 .container-grid{
     display: grid;
+    gap: 20px;
     width: 100%;
     height: 1700px;
     grid-template-columns: repeat(4 1fr);
@@ -271,12 +279,12 @@ li {
 }
 .logo-img{
     color:white;
-    margin: 20px;
 }
 .navbar img{
     margin-right: 5px;
 }
 /* TERMINE DE DARLE ESTILOS A EL HEADER DE MISION*/
+/* COMENCE A DARLE ESTILOS A EL MAIN DE MISION*/
 .container-grid{
     display: grid;
     width: 100%;
@@ -320,7 +328,6 @@ margin: 5px;
     font-family: 'Roboto', sans-serif;
     margin-left: 100px;
 }
-/* COMENCE A DARLE ESTILOS A EL MAIN */
 .medio{
     grid-area: medio;
     display: flex;
@@ -360,13 +367,13 @@ height:400px;
     margin-top: 30px;
     margin-left: 20px;
 }
-.principal h4{
+.principal h5{
     flex-direction: left;
     font-family: 'Rubik Distressed', cursive;
     color: white;
-    font-weight: 50px;
-    font-size: 40px;
-    text-align: start;
+    font-weight: 30px;
+    font-size: 30px;
+    text-align:justify;
     margin-left: 20px;
     margin-top: 20px;
     background-color: rgba(195, 207, 23, 0.959);;
@@ -412,7 +419,7 @@ height:400px;
     display: flex;
     justify-content: flex-end;
     list-style: none;
-    background-color:rgba(209, 223, 19, 0.959);
+    background-color: rgba(209, 223, 19, 0.959);
     margin-top: 20px;
     margin-right: 30px;
 }
@@ -423,16 +430,20 @@ header{
     height: 100px;
     justify-content:flex-end;
 }
-.nav{
-    width: 90%;
+main{
+    width: 100%;
+    height: 1700px;
 }
 .navbar {
     display:flex;
     justify-content: flex-end;
-    gap: 20px;
     list-style: none;
+    gap: 20px;
     width: 100%;
     height: 50px;
+}
+.nav{
+    width: 90%;
 }
 .navbar li a{
     text-decoration: none;
@@ -452,12 +463,13 @@ li {
     list-style: none;
 }
 .escudo img{
-    width: 50px;
-    height: 50px;
+    color: white;
+    width: 100px;
+    height: 100px;
 }
 .escudo a{
-    margin-top: 30px;
-    margin-right: 50px;
+    margin-top: 50px;
+    margin-right: 30px;
 }
 .navbar img{   
     margin-right: 30px;
@@ -475,32 +487,33 @@ li {
     width: 50px;
     margin-left: 10px;
 }
+/* TERMINE DE DARLE ESTILOS A EL HEADER DE EL INDEX*/
+/* COMENCE A DARLE ESTILOS A EL MAIN */
 .medallon{
     display: grid;
     width: 100%;
     height: 100vh;
     gap: 20px;
-    grid-template-columns: repeat(4, 500px);
-    grid-template-rows: repeat(4,1fr);
-    grid-template-areas:
+    grid-template-columns: repeat(4, 100px 1fr 1fr 100px);
+    grid-template-rows: repeat(4,100px 300px) 300px 100pxs;
+    grid-template-areas: 
 
     "cabeza cabeza cabeza cabeza"
-    "tit tit tit imagen"
-    "med med med imagen2"
+    "tit tit tit none"
+    "img med med med"
+    "imagen2 p p p"
     "fin fin fin fin"
 ;
 }
 .medallon{
     display:grid;
-    width: 100%;
-    height: 400px;
 }
 .cabeza{
     grid-area: cabeza;
     display: flex;
     width: 1700px;
-    height: 60px;
-    background-color: rgba(209, 223, 19, 0.959);
+    height: 70px;
+    background-color:rgba(209, 223, 19, 0.959);
 }
 .tit{
     grid-area: tit;
@@ -515,28 +528,32 @@ li {
 }
 .med{
     grid-area: med;
-    height: 50%;
-    width: 100%;
-}
-.imagen{
-    display: flex;
-    flex-direction: row;
-
+    width: 1700px;
+    height: 1000px;
 }
 .imagen img{
-    flex-direction: rigth;
+    display: grid;
+    flex-direction: row;
     margin-left: 10px;
-    border-radius: 20px;
-    width: 500px;
-    height: 500px;
+    border-radius: 40px;
+    width: 400px;
+    height: 400px;
 }
-.imagen p{
-flex-direction: left;
-color: white;
-}
-.imagen2 img{
+img{
     flex-direction: left;
-    border-radius: 20px;
+}
+.p{
+    background-color:rgba(85, 143, 18, 0.61) ;
+    flex-direction: rigth;
+    color: white;
+    width: 1700px;
+    height: 100%;
+}
+.imagen2 {
+    flex-direction:left;
+    border-radius: 50px;
+    width: 50%;
+    height: 50%;
 }
 .fin{
     grid-area: fin;
@@ -545,6 +562,7 @@ color: white;
     background-color: rgba(209, 223, 19, 0.959);
 }
 .parrafo p{
+    flex-direction:left;
     color: black;
     font-size: 30px;
     font-family: 'Rubik Distressed', cursive;
@@ -553,7 +571,7 @@ color: white;
 }
 .imagen2  img{
     margin: 10px;
-    flex-direction: rigth;
+    flex-direction: left;
     width: 50%;
 }
 /* COMENCE A DARLE ESTILOS A EL FOOTER DE NOSOTROS */
@@ -561,7 +579,7 @@ color: white;
 .datos{
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 20px;
     list-style: none;
     width: 1700px;
@@ -583,10 +601,11 @@ color: white;
 }
 .redes-sociales{
     display: flex;
+    width: a700px;
+    height: 70px;
     gap: 20px; 
     justify-content: flex-end;
     list-style: none;
-    background-color:rgba(209, 223, 19, 0.959);
 }
 /* LE DI ESTILOS A LA PAGINA DE INICIO DE PRODUCTOS */
 header {
@@ -627,7 +646,7 @@ li {
     align-items:flex-start;
     color:white;
     margin: 20px;
-    width: 40px ;
+    width: 40px;
     height: 40px;
 }
 .escudo a{
@@ -640,6 +659,7 @@ li {
 }
 .grupo-grid{
     display: grid;
+    gap:20px;
     width: 1700px;
     height: 100vh;
     grid-template-columns: repeat(4, 1fr);
@@ -676,12 +696,12 @@ li {
     margin-left: 120px;
 }
 .tit h1{
-background-color: black;
-text-align:center;
-color: white;
-font-weight: 40px;
-font-size: 50px;
-font-family: 'Roboto', sans-serif;
+    background-color: black;
+    text-align:center;
+    color: white;
+    font-weight: 40px;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
 }
 .tit-d h2{
     color: white;
@@ -694,7 +714,7 @@ font-family: 'Roboto', sans-serif;
     height: 70px;
 }
 .pat{
-  grid-area: pat; 
+    grid-area: pat; 
 }
 .contenedor{
     margin-bottom: 20px;
@@ -722,7 +742,8 @@ font-family: 'Roboto', sans-serif;
     margin: 10px;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
-}.datos p{
+}
+.datos p{
     color:white;
     background-color:rgba(209, 223, 19, 0.959);
     margin: 10px;
@@ -804,6 +825,7 @@ main{
 }
 .contador{
     display:grid;
+    gap:20px;
     width: 100%;
     height: 100%;
     grid-template-columns: repeat(4, 1fr );
@@ -894,30 +916,37 @@ main{
 }
 /* ESTILOS A EL HEADER DE CONTACTOS */
 body{
-    width: 100%;
-    height: 100vh;
+    width: 1700px;
+    height: 1700px;
 }
 header{
+    display: grid;
     width: 100%;
-    height: 100%;
-    display: flex;
+    height: 50%;
     justify-content:flex-end;
 }
-.nav{
-    width: 90%;
+main{
+    width: 100%;
+    height: 1700px;
 }
 .navBar{
     display: flex;
     justify-content: flex-end;
     gap: 20px;
+    padding-left: 20px;
     list-style: none;
-    margin-right: 20px;
+    width: 100%;
+    height: 50%;
+}
+.nav{
+    width: 90%;
 }
 .navBar li a{
     text-decoration: none;
     color:white;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
+    align-items: flex-start;
 }
 .navBar li a:hover{
     color: red;
@@ -927,49 +956,30 @@ header{
 }
 a{
     color:white;
+    text-decoration: none;
 }
 li{
-list-style: none;
+    list-style: none;
 }
 .logo.img{
     color:white;
     width: 50px;
+    height: 50px;
 } 
 /* LE DI ESTILOS A EL MAIN DE CONTACTOS*/
-main{
-    width:100px;
-    height:100px;
-}
-h2{
-    color: white;
-    text-align:left;
-    width: 1700px;
-    height: 70px ;
-} 
-.inter {
-    width: 50px;
-    height: 50px;
-}
 .relac{
     display: grid;
-    width: 100%;
-    height: 1700px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows:repeat(5, 1fr);
+    height: 100%;
+    gap:20px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows:repeat(5, 100px);
     grid-template-areas:
-
     "pag pag pag pag"
-    "titu titu titu titu"
-    "medi medi medi medi"
-    "medi medi medi medi"
+    "medi medi ubic ubic"
+    "medi medi ubic ubic"
+    "medi medi ubic ubic"
     "ult ult ult ult"
     ;
-}  
-    header{
-    display: grid;
-    width: 100%;
-    height: 500vh;
-    justify-content: flex-end;
 }
     .pag{
         grid-area: pag;
@@ -979,32 +989,96 @@ h2{
         background-color:rgba(209, 223, 19, 0.959);
     }
     .medi{
-        grid-area: med;
-        display: grid;
+        grid-area: medi;
+        display: flex;
+        flex-direction: row;
     }
-    .ubic{
-        grid-area: mapa;
-    }
-    .ult{
-        grid-area: ult;
-        width: 1700px;
-        height: 70px;
-    }
-    .medi{
-    display: flex;
-    flex-direction: row;
-    width: 1700px;
-    height: 70px;
-    }
+    .inter h2{
+        flex-direction: rigth;
+        color:black;
+        font-family:'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 30px;
+        text-align:justify;
+        width: 700px;
+        height: 70px ;
+    } 
     .cuest{
         display: flex;
         flex-direction: left;
+        justify-content: center;
     }
-    .mapa{
-        display: flex;
+    .conc h3{
+        color: white;
+        font-family: 'Roboto', sans-serif;
         flex-direction: rigth;
+        width: 700px;
+        height: 70px ;
     }
+    .concurso h4{
+        color: white;
+        flex-direction: rigth;
+        font-family:'Roboto', sans-serif;
+        width: 700px;
+        height: 70px ;
+    }
+    .ubic{
+        grid-area: mapa;
+        display: grid;
+        justify-content: flex-end;
+        flex-direction: left;
+        width: 700px;
+        height: 500px;
+        margin-right: 50px;
+    }
+    .amigable{
+        display: grid;
+        color: black;
+        justify-content: flex-start;
+        flex-direction: rigth;
+        width: 500px;
+        height: 500px;
+        margin: 20px;
+    }
+    .conc{
+        display:flex;
+        flex-direction: rigth;
+        width: 500px;
+        height: 500px;
+        margin-left: 70px;
+        margin-top: 40px;
+    }
+    .inter{
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 100px;
+    }
+    .ult{
+        width: 1700px;
+        height: 70px;
+        color: white;
+        grid-area: ult;
+        font-family: 'Rubik Distressed', cursive;
+        background-color:rgba(209, 223, 19, 0.959);
+    }
+    .relac{
+        display: flex;
+        flex-direction: column;
+        width: 1700px;
+        height: 1700px;
+    }
+    .medi{
+        flex-direction: rigth;
+        background-color:rgb(0, 250, 154);
+        width: 540px;
+        height: 530px;
+        margin-left: 5px;
+    }
+    /* COMENCE A DARLE ESTILOS A EL FOOTER DE CONTACTOS*/
     .datos{
+        display: flex;
+        color: white;
         display: flex;
         gap: 20px;
         list-style: none;
@@ -1012,18 +1086,22 @@ h2{
     .datos h2{
         color:white;
         margin: 10px;
+        gap: 20px;
         font-size: 30px;
         font-family: 'Ubuntu', sans-serif;
+        background-color:rgba(209, 223, 19, 0.959);
     }
     .datos p{
         color:white;
-        margin: 5px;
+        margin: 30px;
         font-size: 30px;
-        font-family: 'Ubuntu', sans-serif;
+        font-family:  'Roboto', sans-serif;
+        background-color:rgba(209, 223, 19, 0.959);
     }
     .redes-sociales{
         display: flex;
         justify-content: flex-end;
         list-style: none;
-        margin-right: 10px;
+        background-color:rgba(209, 223, 19, 0.959);
+        margin-right: 30px;
     }   
