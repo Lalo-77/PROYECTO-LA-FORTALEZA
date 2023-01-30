@@ -9,7 +9,7 @@ html{
     height:100%;
 }
 body{
-    min-height: 100%;
+    height: 1000px;
     background-image: url(../assets/img/castillofenestrelle.jpg);
 }
 /* COMENCE A DAR ESTILOS AL HEADER DE INDEX*/
@@ -19,18 +19,15 @@ header {
     height: 100%;
     justify-content:flex-end;
 }
-main{
-    width: 100%;
-    height: 1700px;
-}
 .navBar{
+
     display: flex;
     justify-content: flex-end;
     list-style: none;
     gap: 20px;
     padding-left: 20px;
     width: 100%;
-    height: 50px;
+    height:100%;
 }
 .nav{
     width: 90%;
@@ -53,28 +50,37 @@ li {
     list-style: none;
 }
 .logo img{
+    align-items: flex-start;
     color:white; 
+    width: 40px;
+    height: 40px;
 }
 .logo a{
     color: white;
 }
 .navBar img{
     margin-right: 5px;
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
 }
 /* TERMINE DE DARLE ESTILOS A EL HEADER DE EL INDEX*/
 /* COMENCE A DARLE ESTILOS A EL MAIN DE EL INDEX*/
+main{
+    width: 1700px;
+    height: 1000px;
+}
 .container-grid{
     display: grid;
     height: 100%;
+    height: 1700px;
     gap: 20px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows:repeat(5, 1fr);
+    grid-template-rows:repeat(6, 1fr); 
     grid-template-areas:
     "encab encab encab encab"
     "titulo titulo titulo titulo"
     "medio medio medio medio"
+    "imagen imagen texto texto"
     "container container container container"
     "pie pie pie pie"
 }
@@ -97,34 +103,35 @@ li {
     font-size: 70px;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 20px;
+    width: 1700px;
+    height: 70px;
 }
 .medio{
-    grid-area: medio;
-    display: flex;
-    width: 1600px;
-    height: 500px;
-}
-.medio p{
-flex-direction: rigth;
-}
-.imagen{
     display: flex;
     flex-direction: row;
+    width: 1700px;
+    height: 100%;
 }
-.img{
+.principal{
+display:flex;
+flex-direction:row;
+width: 1000px;
+height: 100%;
+}
+.imagen{
 flex-direction: rigth;
 border-radius: 50px;
 width: 500px;
-height: 400px;
+height: 500px;
 }
-.imagen-texto{
+.texto{
     flex-direction: left;
     font-weight: 50px;
     font-size: 40px;
     padding: 30px;
     border-left: 50px;
-    width: 600px;
-    height: 100% ;
+    width: 100%;
+    height: 800px;
 }
 .texto h2{
     flex-direction: left;
@@ -133,7 +140,6 @@ height: 400px;
     font-family: 'Roboto', sans-serif;
     border-left: 30px ;
     color: white;
-    margin-left: 20px;
     background-color:rgba(195, 207, 23, 0.959);
 }
 .texto h4{
@@ -143,15 +149,14 @@ height: 400px;
     font-size: 20px;
     color: white;
     background-color:rgba(195, 207, 23, 0.959);
-    text-align: start;
-    margin-left: 20px;
+    text-align: center
 }
 .container{
     grid-area: container;
-    align-items: center;
+    align-content: center;
     width: 500px;
     height: 500px;
-    margin-left: 20%;
+    margin-left: 20px;
 }
 .pie{
     grid-area: abajo;
@@ -173,29 +178,27 @@ height: 400px;
 .datos h2{
     display: flex;
     color: white;
-    margin: 10px;
-    gap: 20px;
+    gap: 10px;
     font-size: 30px;
-    list-style: none;
     width: 1700px;
     height: 70px;
     background-color: rgba(209, 223, 19, 0.959);
 }
 .datos p{
     color:white;
-    margin: 10px;
     font-size: 30px;
+    margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
-    margin-top: 10px;
     margin-right: 10px;
+    width: 1700px;
+    height: 70px;
     background-color: rgba(209, 223, 19, 0.959);
 }
 .redes-sociales a{
-    justify-content: flex-end;
+    justify-content:flex-end;
     list-style: none;
     background-color: rgba(209, 223, 19, 0.959);
     margin-top: 20px;
-    margin-right: 30px;
 }
 @media(max-width:768px) {
 header.encab {
@@ -398,7 +401,7 @@ height:400px;
     gap: 20px;
     list-style: none;
     background-color:rgba(209, 223, 19, 0.959);
-    width: 100%;
+    width: 1700px;
     height: 70px;
 }
 .datos h2{
@@ -406,6 +409,8 @@ height:400px;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
     margin: 20px;
+    width: 1700px;
+    height: 70px;
 }
 .datos p{
     color:white;
@@ -487,7 +492,7 @@ li {
     width: 50px;
     margin-left: 10px;
 }
-/* TERMINE DE DARLE ESTILOS A EL HEADER DE EL INDEX*/
+/* TERMINE DE DARLE ESTILOS A EL HEADER DE NOSOTROS*/
 /* COMENCE A DARLE ESTILOS A EL MAIN */
 .medallon{
     display: grid;
@@ -608,10 +613,13 @@ img{
     list-style: none;
 }
 /* LE DI ESTILOS A LA PAGINA DE INICIO DE PRODUCTOS */
+body{
+    overflow-x: hidden;
+}
 header {
     display: grid;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     justify-content:flex-end;
 }
 .nav{
@@ -631,6 +639,7 @@ header {
     font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 30px;
+    align-items: flex-start;
 }
 .navbar li a:hover{
     color: red;
@@ -654,14 +663,14 @@ li {
 }
 /* LE DI ESTILOS A EL MAIN DE PRODUCTOS */
 .mai{
-    width: 1700px;
-    height: 2000px;
+    width: 100%;
+    height: 1600px;
 }
 .grupo-grid{
     display: grid;
     gap:20px;
-    width: 1700px;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 70px 70px 70px 300px 300px);
     grid-template-areas:
@@ -676,12 +685,12 @@ li {
     grid-area: principio;
     display: flex;
     background-color: rgba(209, 223, 19, 0.959);
-    width: 1700px;
+    width: 100%;
     height: 70px;
 }
 .tit{ 
     grid-area: tit;
-    width: 1700px;
+    width: 100%;
     height: 70px; 
     display: flex;
 }
@@ -691,12 +700,11 @@ li {
 }
 .mai{
     grid-area: mai;
-    background-color: black;
     align-content: center;
     margin-left: 120px;
 }
 .tit h1{
-    background-color: black;
+    background-color:darkorange;
     text-align:center;
     color: white;
     font-weight: 40px;
@@ -710,11 +718,14 @@ li {
     font-size: 40px;
     font-family: 'Roboto', sans-serif;
     background-color: darkorange;
-    width: 1700px;
+    width:100%;
     height: 70px;
 }
 .pat{
     grid-area: pat; 
+    display: flex;
+    width: 100%;
+    height: 70px;
 }
 .contenedor{
     margin-bottom: 20px;
@@ -724,7 +735,7 @@ li {
 .mas h3{
     background-color: darkorange;
     color: white;
-    width: 1700px;
+    width:100%;
     height: 70px;
 }
 /* LE DI ESTILOS A EL FOOTER DE PRODUCTOS  */
@@ -738,14 +749,14 @@ li {
 }
 .datos h2{
     color:white;
-    background-color:rgba(209, 223, 19, 0.959);
+    display: flex;
     margin: 10px;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
 }
 .datos p{
     color:white;
-    background-color:rgba(209, 223, 19, 0.959);
+    display: flex;
     margin: 10px;
     font-size: 30px;
     font-family:'Roboto', sans-serif;
@@ -754,7 +765,6 @@ li {
     display: flex;
     justify-content: flex-end;
     list-style: none;
-    background-color:rgba(209, 223, 19, 0.959);
     margin-right: 30px;
 } 
 /* LE DI ESTILOS A EL HEADER DE CONCEJOS*/
