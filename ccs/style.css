@@ -14,11 +14,14 @@ body{
     background-image: url(../assets/img/castillofenestrelle.jpg);
 }
 /* COMENCE A DAR ESTILOS AL HEADER DE INDEX*/
-header {
-    display: grid;
-    width: 100%;
-    height: 100%;
+.encab{
+    display: flex;
+    grid-area: encab;
+    display: flex;
+    background-color:rgba(209, 223, 19, 0.959);
     justify-content:space-between;
+    width: 1700px;
+    height: 70px;
 }
 .navBar{
     display: flex;
@@ -63,35 +66,27 @@ li {
 }
 /* TERMINE DE DARLE ESTILOS A EL HEADER DE EL INDEX*/
 /* COMENCE A DARLE ESTILOS A EL MAIN DE EL INDEX*/
-main{
-    width: 1700px;
-    height: 1000px;
-}
-.container-grid{
+.grid-container{
     display: grid;
+    width: 100%;
     height: 100%;
-    height: 1700px;
     gap: 20px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows:repeat(6, 1fr); 
+    grid-template-rows:repeat(5, 1fr); 
     grid-template-areas:
     "encab encab encab encab"
     "titulo titulo titulo titulo"
-    "medio medio medio medio"
-    "imagen imagen texto texto"
-    "container container container container"
+    "imagen imegen texto texto"
+    "caroussel caroussel caroussel caroussel "
     "pie pie pie pie"
     ;
 }
 .encab{
-    grid-area: encab;
-    display: flex;
-    background-color:rgba(209, 223, 19, 0.959);
-    width: 1700px;
-    height: 70px;
+grid-area: encab;
+    width: 1700px; 
+    height: 1500px;
 }
 .titulo{
-    grid-area: titulo;
     height: 70px;
     width: 1700px;
 }
@@ -101,68 +96,54 @@ main{
     font-weight:70px;
     font-size: 70px;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 20px;
+    padding-bottom: 30px;
     width: 1700px;
-    height: 70px;
-}
-.medio{
-    display: flex;
-    flex-direction: row;
-    width: 1700px;
-    height: 100%;
-}
-.principal{
-    display:flex;
-    flex-direction:row;
-    width: 1000px;
-    height: 100%;
+    height: 50px;
+    margin-top:10px ;
 }
 .imagen{
     flex-direction: rigth;
-    border-radius: 50px;
-    width: 500px;
+    width: 500px;    
     height: 500px;
+    margin-top: 20px ;
 }
 .texto{
+    grid-area: texto;
+    color: white;
+    background-color: gold;
     flex-direction: left;
-    font-weight: 50px;
-    font-size: 40px;
-    padding: 30px;
-    border-left: 50px;
-    width: 100%;
-    height: 800px;
+    height: 500px;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 1100px;
+    height: 500px;
 }
 .texto h2{
-    flex-direction: left;
-    font-weight: 50px;
-    font-size: 50px;
-    font-family: 'Roboto', sans-serif;
-    border-left: 30px ;
-    color: white;
-    background-color:rgba(195, 207, 23, 0.959);
+    text-align:center;
+    font-family:'Roboto', sans-serif; ;
+    margin: 20px;
+    font-size: 40px;
+    font-weight: 40px;
 }
 .texto h4{
-    flex-direction: left;
-    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
     font-weight: 40px;
-    font-size: 20px;
-    color: white;
-    background-color:rgba(195, 207, 23, 0.959);
-    text-align: center;
+    font-family: 'Rubik Distressed', cursive; 
+    margin: 20px;
 }
-.container{
-    grid-area: container;
-    align-content: center;
-    width: 800px;
-    height: 800px;
-    margin-left: 20px;
+.medio{
+    display: flex;
+    grid-area: medio;
+    width: 1700px;
+    height: 1000px;
 }
 .pie{
     grid-area: pie;
     display: flex;
-    border-bottom: 20px;
     width: 1700px;
     height: 70px;
+    justify-content:flex-end;
     background-color:rgba(209, 223, 19, 0.959);
 }
 /* COMENCE A DARLE ESTILOS A EL FOOTER DEL INDEX*/
@@ -182,8 +163,8 @@ main{
     display: flex;
     font-weight: 400;
     font-size: 30px;
+    justify-content:flex-start;
     font-family:'Roboto', sans-serif;
-    gap:30px;
 }
 .datos h2{
     background-color:rgba(209, 223, 19, 0.959);
@@ -191,6 +172,7 @@ main{
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
     border-top: 10px;
+    justify-content:flex-start;
 }
 
 .datos p{
@@ -261,7 +243,7 @@ ul.navBar li a:hover{
     "encab encab encab encab"
     "titulo titulo titulo titulo"
     "medio medio medio medio"
-    "container container container container"
+    "caroussel caroussel caroussel caroussel"
     "pie pie pie pie"
     ; */
 }
@@ -1056,7 +1038,7 @@ li{
     height: 70px ;
     }
 .ubic{
-    grid-area: mapa;
+    grid-area: ubic;
     display: grid;
     justify-content: flex-end;
     flex-direction: left;
