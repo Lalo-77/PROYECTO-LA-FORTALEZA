@@ -356,13 +356,11 @@ height:400px;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
     background-color: rgba(195, 207, 23, 0.959);
-    border-left: 30px;
     color:white;
     margin-left: 20px;
-    width: 1700px;
-    height: 70px;
+    width: 1800px;
+    height: 100px;
 }
-
 .principal h5{
     flex-direction: left;
     font-family: 'Rubik Distressed', cursive;
@@ -371,6 +369,7 @@ height:400px;
     font-size: 30px;
     text-align:justify;
     background-color: rgba(195, 207, 23, 0.959);
+
 }
 .container{
     grid-area: container;
@@ -664,7 +663,7 @@ li {
     grid-area: principio;
     display: flex;
     background-color: rgba(209, 223, 19, 0.959);
-   width: 1600px;
+    width: 1600px;
     height: 70px;
 }
 .tit-d{
@@ -751,39 +750,56 @@ li {
 header {
     display: grid;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     justify-content:flex-end;
 }
+
 .nav{
     width: 90%;
 }
 .navBar{
-    width: 100%;
+    width: 1600px;
     height: 100%;
     display:flex;
     justify-content: flex-end;
+    list-style-type: style;
+    color: white;
     gap: 20px;
-    list-style: none;
+    margin-left: 30px;
 }
 .navBar li a{
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 30px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    align-items: flex-start;
 }
 .navBar li a:hover{
     color: red;
 }
-.carrito img{
-    margin: 30px;
-}
-a{
-    color: white;
+a {
+    color:white;
     text-decoration: none;
 }
-li{
-    list-style:none;
+li {
+    list-style: none;
+}
+.escudo img{
+    align-items:flex-start;
+    color:white;
+    margin: 20px;
+    width: 40px;
+    height: 40px;
+}
+.escudo a{
+    color:white;
+}
+/* COMENCE A DARLE ESTILOS A EL MAIN DE CONCEJOS */
+.experto{
+    width: 1700px;
+    height: 1500px;
+    display: flex;
+    flex-direction: row;
 }
 .titulo{
     display: flex;
@@ -796,8 +812,7 @@ li{
     color: white;
     flex-direction: rigth;
 }
-/* COMENCE A DARLE ESTILOS A EL MAIN DE CONCEJOS */
-h1{
+.tt h1{
     text-align:center;
     color:white;
     font-size: 40px;
@@ -810,23 +825,22 @@ h1{
     font-family:'Roboto', sans-serif;
 }
 main{
-    width: 100%;
+    width: 1700px;
     height: 100%;
 }
 .contador{
-    display:grid;
-    gap:20px;
+    display: grid;
+    gap: 20px;
     width: 100%;
     height: 100%;
-    grid-template-columns: repeat(4, 1fr );
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
 
     "bnav bnav bnav bnav"
-    "none tt tt none"
-    "prof prof prof ima"
-    "consejos concejos ima2"
-    "concejos concejos ima2"
+    "tt tt tt tt"
+    "prof prof prof robert-f"
+    "consejos concejos concejos concejos"
     "foot foot foot foot"
     ;
 }
@@ -843,44 +857,73 @@ main{
     height: 70px;
     width: 1600px;
 }
-.prof{
+.prof h2{
+    align-content: space-between;
     grid-area: prof;
     flex-direction: left;
+    width: 500px;
+    height: 70px;
+    color: white;
+    font-size: 40px;
+    font-weight: 30px;
+    font-family:'Roboto', sans-serif; 
 
 }
-.ima1{
-    grid-area:ima;
+.robert-f{
+    grid-area:robert-f;
+    flex-direction: left;
+    width: 240px;
+    height: 300px;
+    margin-right: 200px;
+}
+.nombre{
+    color: white;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif; 
 }
 .concejos{
     grid-area: concejos;
-    flex-direction: left;
+    flex-direction: rigth;
+    font-size: 20px;
+    color: white;
+    margin-right:40px;
+    padding: 20px;
+    background-color: darkgoldenrod;
+    font-weight: 30px;
+    font-family: 'Rubik Distressed', cursive;
+    width: 1000px;
+    height:1500px;
+}
+.tt h1{
+    width: 1700px;
+    height: 70px;
+    color:cornflowerblue;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif;
+    background-color: darksalmon;
+    text-align: center;
+    padding: 10px;
+}
+.robert-f p{
+    background-color: darkgoldenrod;
+    font-size: 20px;
+    font-weight: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.concejos p{
+    font-size: 20px;
+    font-weight: 20px;
     color: white;
 }
 .foot{
     grid-area: foot;
-    width: 1600px;
+    width: 1700px;
     height: 70px;
-}
-.ima2{
-    grid-area:ima2;
-} 
-.contador{
     display: flex;
 }
-.prof p{
-    color: white;
-    font-size: 30px;
-    font-family: 'Roboto', sans-serif;
-    margin: 10px;
-}
-.concejos p{
-    font-size: 30px;
-    font-family:'Rubik Distressed', cursive ;
-}
-.prof h2{
-    flex-direction: rigth;
-    color: white;
-}  
 /* LE DI ESTILOS A EL FOOTER DE CONCEJOS */
 .datos{
     background-color:rgba(209, 223, 19, 0.959);
