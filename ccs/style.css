@@ -20,13 +20,14 @@ body{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 70px;
 }
 nav{
 width: 90%;
 }
 .navBar{
     display: flex;
-    justify-content:space-evenly;
+    justify-content:flex-end;
     font-weight:20px;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
@@ -60,106 +61,119 @@ width: 90%;
     height: 30px;
 }
 /* COMENCE A DARLE ESTILOS A EL MAIN DE EL INDEX*/
-.encab{
-    grid-area: encab;
-    display: flex;
-    width: 1600px;
-    height: 70px;
+.grid-container{
+    display: grid;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 .grid-container{
     display: grid;
-    width: 1700px;
-    height: 2000px;
+    width: 100%;
+    height: 100vh;
     gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows:repeat (5,1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:(4,1fr);
     grid-template-areas:
-    "encab encab encab encab"
-    "titulo titulo titulo titulo"
-    "medi medi textos textos"
-    "caroussel caroussel caroussel caroussel"
-    "pie pie pie pie"
+    "encab encab encab"
+    "titulop titulop titulop"
+    "medios medios medios"
+    "pie pie pie"
     ;
 }
-.titulo{
-    height: 70px;
-    width: 1400px;
+#grid-2{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "resto resto textos textos"
+    "resto resto textos textos"
+    "caroussel caroussel caroussel caroussel"
+    ;
 }
-.titulo h1{
+.encab{
+    grid-area: encab;
+    background-color: rgb(117, 108, 179);
+}
+.titulop{
+    grid-area: titulop;
     text-align:center;
-    color:goldenrod;
     font-weight:70px;
     font-size: 60px;
     font-family: 'Roboto', sans-serif;
-    width: 1400px;
-    height: 50px;
-    margin-top:10px ;
-}
-.medi{
-    display: grid;
-    flex-direction:column;
-    grid-area: medi;
-    margin-top: 30px;
+    font-size: 40px;
+    color:midnightblue;
     width: 1700px;
-    height: 800px;
+    height: 70px;
 }
-.suenos{
-    display: flex;
-    flex-direction: row;
-    margin-right: 50px;
+.medios{
+    grid-area: medios;
     width: 1700px;
-    height: 800px;
+    height: 1000px;
+}
+.medios{
+    display:grid;
+    grid-area: medios;
 }
 .resto{
-    flex-direction: left;
-    width: 800px;
-    height: 800px;
+    display: grid;
+    grid-area: resto;
+    flex-direction:row;
+    justify-content: flex-start;
+    width: 900px;
+    height:500px;
 }
 .resto img{
-    margin-top: 30px;
-    margin-right: 100px;
-    width: 550px;
-    height: 690px;
-    border-radius: 50px;
+    width: 900px;
+    height:500px;
 }
 .textos{
+    display:grid;
+    grid-area: textos;
+    flex-direction:column;
+    justify-content: flex-end;
     grid-area: textos;
     color: white;
-    background-color:rgb(212, 170, 114);
-    flex-direction: rigt;
-    border-radius: 50px;
-    margin-right: 40px;
-    margin-top: 30px;
-    width: 1200px;
-    height: 700px;
+    background-color:cornflowerblue ;
+    width: 870px;
+    height: 500px;
 }
 .textos h2{
     text-align:center;
     font-family:'Roboto', sans-serif;
-    margin-right: 10px;
-    font-size: 40px;
+    margin-top: 30px;
+    color:black;
+    font-size: 30px;
     font-weight: 40px;
 }
 .textos h4{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 40px;
     font-family: 'Rubik Distressed', cursive;
     margin: 20px;
+    padding-right:40px;
+}
+.container.col-md-6{
+    width: 700px;
+    height: 700px;
 }
 .caroussel{
+    background-color:darkseagreen;
+    display:grid;
     grid-area: caroussel;
-    flex-direction:column;
-    align-items: center;
-    width: 1700px;
-    height: 500px;
+    flex-direction: row;
+    justify-content:center;
+    width: 100%;
+    height: 820px;
 }
 /* COMENCE A DARLE ESTILOS A EL FOOTER DEL INDEX*/
 .pie{
     grid-area: pie;
     display: flex;
-    width: 1700px;
-    height: 70px;
     gap: 30px;
+    width: 1000px;
+    height: 70;
     justify-content:flex-start;
     background-color: #F4D03F;
     background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
@@ -180,10 +194,13 @@ width: 90%;
     font-size: 30px;
     font-weight: 30px;
 }
-.redes-sociales a{
+.redes-sociales{
     display: flex;
     justify-content:space-evenly;
-    list-style: none;
+    list-style:none;
+    align-items: center;
+    width: 100px;
+    height: 30px;
 }
 @media(max-width:768px){
 header.encab{
@@ -205,28 +222,31 @@ align-items: center;
     font-size: 20px;
     background-position: 50px;
 }
-.titulo h1 {
+h1 {
     color:lightgreen ;
     font-size: 40px;
     text-align: center;
 }
-.container-grid{
+.grid-container{
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px 200px 400px ;
+    grid-template-rows: repeat(3, 1fr) ;
     grid-template-areas:
-    "encab encab titulo"
-    "imagen imagen texto"
+    "encab encab titulop"
+    "medios medios medios"
     "caroussel caroussel pie"
     ;
 }
 }
 @media(max-width:600px) and (max-width:430px){
-    .caja-grande{
+    .grid-container{
         background-position: 50px;
     }
-    .suenos img{
+    #grid-2{
+        background-position: 50px;
+    }
+    .logo img{
         width: 500px;
-        height: 600px;
+        height: 500px;
     }
 }
 @media (max-width:320px){
@@ -246,7 +266,7 @@ background-color:greenyellow;
         color: black;
         font-size: 20px;
     }
-    .titulo h1 {
+    h1 {
         color:deepskyblue;
         text-align: center;
         width: 200px;
@@ -256,16 +276,23 @@ background-color:greenyellow;
         font-family: 'Roboto', sans-serif;
     }
     }
-    .container-grid{
+    .grid-container{
         grid-template-columns:(1 1fr);
         grid-template-rows: 1fr 1fr 300px 200px 1fr 200px;
         grid-template-areas:
         "encab"
-        "titulo"
-        "resto.img"
-        "textos"
-        "carousel"
+        "titulop"
+        "medios"
         "pie"
+        ;
+    }
+#gri-2{
+        grid-template-columns:(1 1fr);
+        grid-template-rows: 1fr 1fr 300px 200px 1fr 200px;
+        grid-template-areas:
+        "resto"
+        "textos"
+        "caroussel"
         ;
     }
 /* COMENCE A DAR ESTILOS AL HEADER DE MISION*/
@@ -444,10 +471,13 @@ width: 90%;
     font-size: 30px;
     font-weight: 30px;
 }
-.redes-sociales a{
+.redes-sociales{
     display: flex;
     justify-content:space-evenly;
     list-style: none;
+    align-items: center;
+    width: 100px;
+    height: 30px;
 }
 /* COMENCE A DARLE ESTILOS A EL FOOTER DE MISION*/
 @media(max-width:768px){
@@ -470,7 +500,12 @@ width: 90%;
         font-size: 20px;
         background-position: 50px;
     }
-    .titulo h1 {
+    .titulo h2 {
+        color:lightgreen ;
+        font-size: 40px;
+        text-align: center;
+    }
+    .titulo h3 {
         color:lightgreen ;
         font-size: 40px;
         text-align: center;
@@ -503,6 +538,15 @@ width: 90%;
             font-size: 20px;
         }
         .titulo h2 {
+            color:deepskyblue;
+            text-align: center;
+            width: 200px;
+            height: 20px;
+            font-size: 30px;
+            font-weight:40px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .titulo h3 {
             color:deepskyblue;
             text-align: center;
             width: 200px;
@@ -577,7 +621,7 @@ width: 90%;
     grid-template-rows: repeat(5, 200px);
     grid-template-areas:
     "encab encab encab encab"
-    "tit tit tit none"
+    "tit tit tit tit"
     "med med med med"
     "med med med med"
     "pie pie pie pie"
@@ -669,11 +713,101 @@ width: 90%;
     font-size: 30px;
     font-weight: 30px;
 }
-.redes-sociales a{
+.redes-sociales{
     display: flex;
     justify-content:space-evenly;
     list-style: none;
+    align-items: center;
+    width: 100px;
+    height: 30px;
 }
+@media(max-width:768px){
+    header.encab{
+        background-color:cyan ;
+    }
+    .logo a{
+        color: cornflowerblue;
+    }
+    .navBar li a:hover {
+        color: gold;
+    }
+    .navBar{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    }
+    .navBar li a{
+        color: black;
+        font-size: 20px;
+        background-position: 50px;
+    }
+    h2 {
+        color:lightgreen ;
+        font-size: 40px;
+        text-align: center;
+    }
+    .medallon{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr) ;
+        grid-template-areas:
+        "encab encab tit"
+        "med med med"
+        "pie pie pie"
+        ;
+    }
+    }
+    @media(max-width:600px) and (max-width:430px){
+        .medallon{
+            background-position: 50px;
+        }
+        .imagen1 img{
+            width: 500px;
+            height: 500px;
+        }
+        .imagen2 img{
+            width: 500px;
+            height: 500px;
+        }
+    }
+    @media (max-width:320px){
+    header.encab{
+    background-color: chocolate;
+    }
+    .logo a{
+    color:dodgerblue;
+    }
+    .navBar li a:hover{
+    background-color:greenyellow;
+    }
+    .navBar{
+        align-items:flex-start;
+        }
+    .navBar li a{
+            color: black;
+            font-size: 20px;
+        }
+        h2 {
+            color:deepskyblue;
+            text-align: center;
+            width: 200px;
+            height: 20px;
+            font-size: 30px;
+            font-weight:40px;
+            font-family: 'Roboto', sans-serif;
+        }
+        }
+        .medallon{
+            grid-template-columns:(1 1fr);
+            grid-template-rows: 1fr 1fr 300px 200px 1fr 200px;
+            grid-template-areas:
+            "encab"
+            "tit"
+            "med"
+            "med"
+            "med"
+            "pie"
+            ;
+        }
 /* LE DI ESTILOS A LA PAGINA DE INICIO DE PRODUCTOS */
 .encab{
     display: flex;
@@ -825,11 +959,110 @@ width: 90%;
     font-size: 30px;
     font-weight: 30px;
 }
-.redes-sociales a{
+.redes-sociales{
     display: flex;
     justify-content:space-evenly;
     list-style: none;
+    align-items: center;
+    width: 100px;
+    height: 30px;
 }
+@media(max-width:768px){
+    header.encab{
+        background-color:cyan ;
+    }
+    .logo a{
+        color: cornflowerblue;
+    }
+    .navBar li a:hover {
+        color: gold;
+    }
+    .navBar{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    }
+    .navBar li a{
+        color: black;
+        font-size: 20px;
+        background-position: 50px;
+    }
+    h1 {
+        color:lightgreen ;
+        font-size: 40px;
+        text-align: center;
+    }
+    h2 {
+        color:lightgreen ;
+        font-size: 40px;
+        text-align: center;
+    }
+    .grupo-grid{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr) ;
+        grid-template-areas:
+        "encab encab titulo"
+        "imagen imagen texto"
+        "caroussel caroussel pie"
+        ;
+    }
+    }
+    @media(max-width:600px) and (max-width:430px){
+        .grupo-grid{
+            background-position: 50px;
+        }
+        .caroussel{
+            width: 500px;
+            height: 500px;
+        }
+    }
+    @media (max-width:320px){
+    header.encab{
+    background-color: chocolate;
+    }
+    .logo a{
+    color:dodgerblue;
+    }
+    .navBar li a:hover{
+    background-color:greenyellow;
+    }
+    .navBar{
+        align-items:flex-start;
+        }
+    .navBar li a{
+            color: black;
+            font-size: 20px;
+        }
+        .menu h1 {
+            color:deepskyblue;
+            text-align: center;
+            width: 200px;
+            height: 20px;
+            font-size: 30px;
+            font-weight:40px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .menu h2 {
+            color:deepskyblue;
+            text-align: center;
+            width: 200px;
+            height: 20px;
+            font-size: 30px;
+            font-weight:40px;
+            font-family: 'Roboto', sans-serif;
+        }
+        }
+        .grupo-grid{
+            grid-template-columns:(1 1fr);
+            grid-template-rows: 1fr 1fr 300px 200px 1fr 200px;
+            grid-template-areas:
+            "encab"
+            "menu"
+            "tit-d"
+            "mai"
+            "pie"
+            ;
+        }
 /* LE DI ESTILOS A EL HEADER DE CONCEJOS*/
 .encab{
     display: flex;
@@ -1005,24 +1238,12 @@ main{
     display: flex;
     width: 1700px;
     height: 70px;
-    gap: 30px;
-    justify-content:flex-start;
-    background-color: #F4D03F;
-    background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
-}
-.pie{
-    grid-area: pie;
-    display: flex;
-    width: 1700px;
-    height: 70px;
-    gap: 30px;
     justify-content:flex-start;
     background-color: #F4D03F;
     background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
 }
 .datos{
     display: flex;
-    column-gap: 50px;
     align-items: center;
     color: black;
     font-family:'Roboto', sans-serif;
@@ -1036,11 +1257,96 @@ main{
     font-size: 30px;
     font-weight: 30px;
 }
-.redes-sociales a{
+.redes-sociales{
     display: flex;
     justify-content:space-evenly;
     list-style: none;
+    width: 100px;
+    height: 30px;
 }
+@media(max-width:768px){
+    header.encab{
+        background-color:cyan ;
+    }
+    .logo a{
+        color: cornflowerblue;
+    }
+    .navBar li a:hover {
+        color: gold;
+    }
+    .navBar{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    }
+    .navBar li a{
+        color: black;
+        font-size: 20px;
+        background-position: 50px;
+    }
+    h1 {
+        color:lightgreen ;
+        font-size: 40px;
+        text-align: center;
+    }
+    .contador{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr) ;
+        grid-template-areas:
+        "encab encab tt"
+        "prof prof robert-fv"
+        "concejos pie pie"
+        ;
+    }
+    }
+    @media(max-width:600px) and (max-width:430px){
+        .contador{
+            background-position: 50px;
+        }
+        .robert-f img{
+            width: 500px;
+            height: 500px;
+        }
+    }
+    @media (max-width:320px){
+    header.encab{
+    background-color: chocolate;
+    }
+    .logo a{
+    color:dodgerblue;
+    }
+    .navBar li a:hover{
+    background-color:greenyellow;
+    }
+    .navBar{
+        align-items:flex-start;
+        }
+    .navBar li a{
+            color: black;
+            font-size: 20px;
+        }
+        h1 {
+            color:deepskyblue;
+            text-align: center;
+            width: 200px;
+            height: 20px;
+            font-size: 30px;
+            font-weight:40px;
+            font-family: 'Roboto', sans-serif;
+        }
+        }
+        .contador{
+            grid-template-columns:(1 1fr);
+            grid-template-rows: 1fr 1fr 300px 200px 1fr 200px;
+            grid-template-areas:
+            "encab"
+            "tt"
+            "prof"
+            "robert-fv"
+            "concejos"
+            "pie"
+            ;
+        }
 /* ESTILOS A EL HEADER DE CONTACTOS */
 .encab{
     display: flex;
@@ -1229,8 +1535,111 @@ width: 90%;
     font-size: 30px;
     font-weight: 30px;
 }
-.redes-sociales a{
+.redes-sociales{
     display: flex;
     justify-content:space-evenly;
     list-style: none;
+    align-items: center;
+    width: 100px;
+    height: 30px;
 }
+@media(max-width:768px){
+    header.encab{
+        background-color:cyan ;
+    }
+    .logo a{
+        color: cornflowerblue;
+    }
+    .navBar li a:hover {
+        color: gold;
+    }
+    .navBar{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    }
+    .navBar li a{
+        color: black;
+        font-size: 20px;
+        background-position: 50px;
+    }
+    h1 {
+        color:lightgreen ;
+        font-size: 40px;
+        text-align: center;
+    }
+    .medi{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr) ;
+        grid-template-areas:
+        "encab encab medi"
+        "med med ubic"
+        "ubic pie pie"
+        ;
+    }
+    }
+    @media(max-width:600px) and (max-width:430px){
+        .grid-container{
+            background-position: 50px;
+        }
+        .medi{
+            width: 500px;
+            height: 500px;
+        }
+        .concurso{
+            width: 500px;
+            height: 500px;
+        }
+        .mapa{
+            width: 500px;
+            height: 500px; 
+        }
+    }
+    @media (max-width:320px){
+    header.encab{
+    background-color: chocolate;
+    }
+    .logo a{
+    color:dodgerblue;
+    }
+    .navBar li a:hover{
+    background-color:greenyellow;
+    }
+    .navBar{
+        align-items:flex-start;
+        }
+    .navBar li a{
+            color: black;
+            font-size: 20px;
+        }
+        h2 {
+            color:deepskyblue;
+            text-align: center;
+            width: 200px;
+            height: 20px;
+            font-size: 30px;
+            font-weight:40px;
+            font-family: 'Roboto', sans-serif;
+        }
+        h4 {
+            color:deepskyblue;
+            text-align: center;
+            width: 200px;
+            height: 20px;
+            font-size: 30px;
+            font-weight:40px;
+            font-family: 'Roboto', sans-serif;
+        }
+        }
+        .medallon{
+            grid-template-columns:(1 1fr);
+            grid-template-rows: 1fr 1fr 300px 200px 1fr 200px;
+            grid-template-areas:
+            "encab"
+            "tit"
+            "med"
+            "med"
+            "med"
+            "pie"
+            ;
+        }
