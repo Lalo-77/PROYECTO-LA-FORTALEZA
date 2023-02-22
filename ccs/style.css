@@ -24,13 +24,15 @@ header.encab{
     justify-content: space-between;
     width: 1700px;
     height: 70px;
+    background-color: #F4D03F;
+    background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
 }
 nav{
 width: 90%;
 }
 .navBar{
     display: flex;
-    justify-content:flex-end;
+    justify-content:space-evenly;
     font-weight:20px;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
@@ -344,7 +346,7 @@ header.encab{
             "resto"
             "textos"
             "caroussel"
-            ;
+    ;
     }
     .pie{
         width: 1700px;
@@ -467,7 +469,6 @@ width: 90%;
     flex-direction:row;
     width: 500px;
     height:500px;
-    
 }
 .texto{
     display: grid;
@@ -626,8 +627,6 @@ width: 90%;
     .pie{
         width: 1700px;
         height: 70px;
-        position: fixed;
-        bottom: 0;
     }
     }
     @media (max-width:320px){
@@ -698,6 +697,11 @@ width: 90%;
         }
     }
 /* INICIE DARLE ESTILOS A EL HEADER DE NOSOTROS*/
+.medallon{
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
 .encab{
     display: flex;
     justify-content: space-between;
@@ -746,8 +750,8 @@ width: 90%;
     display: grid;
     width: 100%;
     gap: 20px;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: (4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
     "encab encab encab encab"
     "tit tit tit tit"
@@ -772,28 +776,32 @@ width: 90%;
     display: grid;
     grid-area: tit;
 }
-.tit h2{
-    text-align:start;
+.tit h3{
     color:white;
-    font-weight: 50px;
-    font-size: 50px;
+    font-weight: 40px;
+    font-size: 40px;
     margin-left: 20px;
     font-family: 'Roboto', sans-serif;
-    border-radius: 20px;
+    border-radius: 50px;
+    text-align:center;
+    background-color: coral;
+    margin: 10px;
+    width: 1000px;
+    height: 70px;
 }
 .med{
     display: grid;
     grid-area: med;
     width: 1700px;
-    height: 1500px;
+    height: 1200px;
 }
 .med{
     display: grid;
-    grid-template-columns:repeat(3,1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns:repeat(3,500px);
+    grid-template-rows: repeat(2,500px);
     grid-template-areas:
-"imagen texto1 texto1"
-"imag2 texto1 texto1"
+    "imagen texto1 texto1"
+    "imag2 texto1 texto1"
 ;
 }
 .imagen{
@@ -807,18 +815,17 @@ width: 90%;
     width: 500px;
     height: 500px;
 }
-.imag2 img{ 
-    flex-direction:column;
-    display: grid;
-    grid-area: imag2;
-    width: 500px;
-    height: 500px;
-    margin: 10px;
-    border-radius: 40px;
+.imag2{
+display: grid;
+grid-area:imag2;
 }
-.imag2 {
+.imag2 img{
+    flex-direction:column;
     width: 500px;
     height: 500px;
+    border-radius: 50px;
+    padding: 10px;
+    margin-top: 10px;
 }
 .texto1{
     display:grid;
@@ -829,9 +836,9 @@ width: 90%;
     margin-left: 30px;
     background-color: rgba(209, 223, 19, 0.959);
     font-size: 30px;
-    font-weight: 20px;
+    font-weight: 30px;
     width: 1000px;
-    height: 1100px;
+    height: 1000px;
     border-radius: 50px;
     padding: 40px;
 }
@@ -842,11 +849,11 @@ width: 90%;
 }
 /* COMENCE A DARLE ESTILOS A EL FOOTER DE NOSOTROS */
 .pie{
+    position: fixed;
+    bottom: 0;
     grid-area: pie;
     display: flex;
     gap: 30px;
-    position: fixed;
-    bottom: 0;
     margin-top: 1000px;
     background-color: #F4D03F;
     background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
@@ -895,28 +902,65 @@ width: 90%;
         font-size: 20px;
         background-position: 50px;
     }
-    .tit h2 {
-        color:lightgreen ;
-        font-size: 40px;
-        text-align: center;
+    .tit h3{
+        color:white;
+        font-weight: 30px;
+        font-size: 30px;
+        font-family: 'Roboto', sans-serif;
+        border-radius: 40px;
+        text-align:center;
+        background-color: coral;
+        width: 1000px;
+        height: 70px;
     }
     .medallon{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr) ;
+        display: grid;
+        grid-template-columns:repeat(3, auto);
+        grid-template-rows:repeat(3, auto);
         grid-template-areas:
         "encab encab tit"
-        "med med med"
+        "med med"
         "pie pie pie"
         ;
     }
     .med{
         display: grid;
-        grid-template-columns:repeat(3,1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns:(3, 1fr);
+        grid-template-rows: (2, 1fr);
         grid-template-areas:
     "imagen texto1 texto1"
     "imag2 texto1 texto1"
     ;
+    }
+    .imagen img{
+        flex-direction:column;
+        margin: 10px;
+        border-radius: 40px;
+        width: 500px;
+        height: 500px;
+    }
+    .imag2 img{
+        flex-direction:column;
+        width: 500px;
+        height: 500px;
+        border-radius: 50px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    .texto1{
+        display:flex;
+        flex-direction: column;
+        color:whitesmoke;
+        font-size: 30px;
+        font-family:'Rubik Distressed', cursive;
+        margin-left: 30px;
+        background-color:darkseagreen;
+        font-size: 40px;
+        font-weight: 35px;
+        width: 1000px;
+        height: 1600px;
+        border-radius: 30px;
+        padding: 20px;
     }
     .pie{
         width: 1700px;
@@ -940,11 +984,11 @@ width: 90%;
             color: black;
             font-size: 20px;
         }
-        h2 {
+        h3 {
             color:deepskyblue;
             text-align: center;
-            width: 200px;
-            height: 20px;
+            width: 500px;
+            height: 100px;
             font-size: 30px;
             font-weight:40px;
             font-family: 'Roboto', sans-serif;
@@ -970,6 +1014,40 @@ width: 90%;
         "imag2"
         "texto1"
         ;
+        }
+        .med{
+            width: 1700px;
+            height:1700px;
+        }
+        .imagen img{
+            display: flex;
+            flex-direction:column;
+            margin: 10px;
+            border-radius: 30px;
+            width: 500px;
+            height: 500px;
+        }
+        .imag2 img{
+            display: flex;
+            flex-direction:column;
+            width: 500px;
+            height: 500px;
+            border-radius: 50px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .texto1{
+            display:flex;
+            flex-direction: column;
+            color:white;
+            font-size: 30px;
+            font-family:'Rubik Distressed', cursive;
+            background-color:cornflowerblue;
+            font-size: 25px;
+            font-weight: 20px;
+            width: 700px;
+            height: 1200px;
+            border-radius: 30px;
         }
         .pie{
             width: 1700px;
@@ -1453,13 +1531,13 @@ main{
     display: grid;
     gap: 20px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
     "encab encab encab encab"
     "tt tt tt tt"
-    "prof prof prof robert-fv"
+    "prof prof prof prof"
     "concejos concejos concejos concejos"
     "pie pie pie pie"
     ;
@@ -1474,27 +1552,44 @@ main{
     background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
 }
 .tt{
+    display: grid;
+    grid-area: tt;
     grid-area:tt;
     height: 70px;
     width: 1700px;
 }
 .prof h2{
-    align-content: space-between;
+    align-content:flex-start;
     grid-area: prof;
-    flex-direction: left;
+    flex-direction: row;
     width: 500px;
     height: 70px;
-    color: white;
+    color:gold;
     font-size: 40px;
     font-weight: 30px;
     font-family:'Roboto', sans-serif;
 }
+.robert-f img{
+    width: 500px;
+    height: 500px;
+    padding: 30px;
+}
 .robert-f{
+    display: grid;
     grid-area:robert-f;
-    flex-direction: left;
-    width: 240px;
+    flex-direction:column;
+    width: 500px;
     height: 300px;
-    margin-right: 200px;
+}
+.robert-f p{
+    background-color: darkgoldenrod;
+    font-size: 30px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 20px;
+    width:450px;
+    height: 50px;
+    text-align:center;
 }
 .nombre{
     color: white;
@@ -1503,8 +1598,9 @@ main{
     font-family: 'Roboto', sans-serif;
 }
 .concejos{
+    display: grid;
     grid-area: concejos;
-    flex-direction: rigth;
+    flex-direction: column;
     font-size: 20px;
     color: white;
     margin-right:40px;
@@ -1512,8 +1608,21 @@ main{
     background-color: darkgoldenrod;
     font-weight: 30px;
     font-family: 'Rubik Distressed', cursive;
-    width: 1000px;
-    height:1500px;
+    width: 800px;
+    height:1400px;
+}
+.experto{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: (4, 100px 100px 800px 800px );
+    grid-template-areas:
+    "prof prof concejos concejos"
+    "robert-f robert-f concejos concejos"
+    "none none concejos concejos"
+    "none none concejos concejos"
+    ;
 }
 .tt h1{
     width: 1700px;
@@ -1525,20 +1634,6 @@ main{
     background-color: darksalmon;
     text-align: center;
     padding: 10px;
-}
-.robert-f p{
-    background-color: darkgoldenrod;
-    font-size: 20px;
-    font-weight: 10px;
-    font-family: 'Roboto', sans-serif;
-}
-.beneficios{
-    grid-area: beneficios;
-}
-.concejos p{
-    font-size: 20px;
-    font-weight: 20px;
-    color: white;
 }
 /* LE DI ESTILOS A EL FOOTER DE CONCEJOS */
 .pie{
@@ -1598,14 +1693,86 @@ main{
         font-size: 40px;
         text-align: center;
     }
+    .tt{
+        display: grid;
+        grid-area: tt;
+        grid-area:tt;
+        height: 70px;
+        width: 1700px;
+    }
     .contador{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr) ;
         grid-template-areas:
         "encab encab tt"
-        "prof prof robert-fv"
+        "prof prof concejos"
         "concejos pie pie"
         ;
+    }
+    .prof h2{
+        align-content:flex-start;
+        grid-area: prof;
+        flex-direction: row;
+        width: 500px;
+        height: 70px;
+        color:gold;
+        font-size: 40px;
+        font-weight: 30px;
+        font-family:'Roboto', sans-serif;
+    }
+    .robert-f img{
+        width: 500px;
+        height: 500px;
+        padding: 30px;
+    }
+    .experto{
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows: (3, 100px 100px 800px 800px );
+        grid-template-areas:
+        "prof concejos concejos"
+        "robert-f concejos concejos"
+        "none concejos concejos"
+        ;
+    }
+    .robert-f{
+        display: grid;
+        grid-area:robert-f;
+        flex-direction:column;
+        width: 500px;
+        height: 300px;
+    }
+    .robert-f p{
+        background-color: darkgoldenrod;
+        font-size: 30px;
+        font-weight: 20px;
+        font-family: 'Roboto', sans-serif;
+        margin-left: 20px;
+        width:450px;
+        height: 50px;
+        text-align:center;
+    }
+    .nombre{
+        color: white;
+        font-size: 30px;
+        font-weight: 30px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .concejos{
+        display: grid;
+        grid-area: concejos;
+        flex-direction: rigth;
+        font-size: 20px;
+        color: white;
+        margin-right:40px;
+        padding: 20px;
+        background-color: darkgoldenrod;
+        font-weight: 30px;
+        font-family: 'Rubik Distressed', cursive;
+        width: 800px;
+        height:1400px;
     }
     .pie{
         width: 1700px;
@@ -1630,7 +1797,7 @@ main{
             font-size: 20px;
         }
         h1 {
-            color:deepskyblue;
+            color:lawngreen;
             text-align: center;
             width: 200px;
             height: 20px;
@@ -1645,10 +1812,58 @@ main{
             "encab"
             "tt"
             "prof"
-            "robert-fv"
             "concejos"
             "pie"
             ;
+        }
+        .experto{
+            display: grid;
+            width: 100%;
+            height: 100vh;
+            grid-template-columns:repeat(1, 1fr);
+            grid-template-rows: (1, 100px 100px 800px 800px );
+            grid-template-areas:
+            "prof"
+            "concejos"
+            "robert-f"
+            ;
+        }
+        .prof h2{
+            align-content:center;
+            grid-area: prof;
+            flex-direction: column;
+            width: 500px;
+            height: 70px;
+            color:brown;
+            font-size: 40px;
+            font-weight: 30px;
+            font-family:'Roboto', sans-serif;
+        }
+        .robert-f{
+            display: grid;
+            grid-area:robert-f;
+            flex-direction:column;
+            width: 400px;
+            height: 200px;
+        }
+        .robert-f img{
+            width: 400px;
+            height: 200px;
+            padding: 30px;
+        }
+        .concejos{
+            display: grid;
+            grid-area: concejos;
+            flex-direction:column;
+            font-size: 20px;
+            color:black;
+            margin-right:20px;
+            padding: 20px;
+            background-color:dodgerblue;
+            font-weight: 30px;
+            font-family: 'Rubik Distressed', cursive;
+            width: 500px;
+            height:1400px;
         }
         .pie{
             width: 1700px;
@@ -2053,7 +2268,6 @@ h3{
     font-family:'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 20px;
-
 }
 .resp3{
     color:deepskyblue;
@@ -2267,10 +2481,13 @@ h3{
         }
     }
 /* COMIENZO A DARLE ESTILOS A EL HEADER DE COMPRAS*/
-.encab{
+header.encab{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 70px;
+    background-color: #F4D03F;
+    background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
 }
 nav{
 width: 90%;
@@ -2311,103 +2528,158 @@ width: 90%;
     height: 30px;
 }
 /* LE DOY ESTILOS A EL MAIN DE COMPRAS*/
+header.encab{
+    display: flex;
+    justify-content: space-between;
+    width: 1700px;
+    height: 70px;
+    background-color: #F4D03F;
+    background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+}
 .ventas{
-    display: grid;
     flex-direction: column;
     flex-wrap: nowrap;
 }
 .ventas{
     display: grid;
-    width: 100%;
+    width: 1700px;
     height: 100vh;
-    gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows:(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:repeat(4,1fr);
     grid-template-areas:
     "encab encab encab encab"
-    "igual aigual igual igual"
+    "comp comp comp comp"
+    "igual igual igual igual"
     "pie pie pie pie"
     ;
 }
-header.encab{
-    grid-area: encab;
-}
-.comp h1{
+.comp{
     grid-area: comp;
-    display: grid;
-    color: black;
-    align-items: center;
-    }
-.igual{
-    grid-area: igual;
-    text-align:center;
-    font-weight:70px;
-    font-size: 60px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 40px;
-    color:darkviolet;
-    width: 1700px;
+    color:midnightblue;
+    width: 400px;
     height: 70px;
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 50px;
+    background-color:darkseagreen;
 }
 .igual{
-    display: grid;
     grid-area: igual;
     width: 1700px;
     height: 1000px;
-}
-.contr{
-    display: grid;
-    grid-area: resto;
-    flex-direction:column;
-    justify-content:flex-start;
-    width: 900px;
-    height:500px;
-}
-.resto img{
-    width: 900px;
-    height:500px;
+    background-color: aqua;
 }
 .uuno{
-display: grid;
-
+    display: grid;
+    width: 1600px;
+    height: 100vh;
+    grid-template-columns: (3, 1fr auto auto);
+    grid-template-rows:repeat(3, 1fr);
+    grid-template-areas:
+    "contr dtos doss"
+    "contr dtos doss"
+    "contr dtos doss"
+    ;
+}
+.contr{
+    grid-area: contr;
+    width: 600px;
+    height: 700px;
+    padding: 20px;
+}
+.contr img{
+    width: 500px;
+    height: 500px;
+}
+.dtos{
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    height: 320px;
+    grid-area: dtos;
+    color: black;
+    background-color: #F4D03F;
+    margin-top: 20px;
+}
+.cobr{
+    color: black;
 }
 .ing h2{
+    font-size: 30px;
+    font-weight: 30px;
+    width: 400px;
+    height: 100px;
+    font-family: 'Roboto', sans-serif;
     color: black;
 }
 .informac{
-    color: black;
-}
-.pila{
-    color:black;
-}
-.nombre{
-    color: black;
-}
-.apellido{
-    color: black;
-}
-.imail{
+    width: 550px;
+    height: 100px;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif;
     color: black;
 }
 .doss{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    grid-area: doss;
+    width: 550px;
+    height: 310px;
+    color: black;
+    margin: 20px;
+    background-color: brown;
 }
-.añadir h2{
+.añadir h3{
+    width: 200px;
+    height: 100px;
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
     color: black;
 }
 .datper{
+    width: 200px;
+    height: 100px;
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+.cobr{
+    width: 600px;
+    height: 310px;
+    font-size: 10px;
+    font-weight: 10px;
+    font-family: 'Roboto', sans-serif;
     color: black;
 }
 .cuentas{
-    display: grid;
+    width: 550px;
+    height: 300px;
 }
-.cobrar{
-    color:black;
+.saldo{
+    color: black;
 }
+.pag{
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* LE DOY ESTILOS A EL FOOTER DE COMPRAS*/
 .pie{
-    grid-area: pie;
     display: flex;
+    grid-area: pie;
     gap: 30px;
     width: 1700px;
     height: 70px;
