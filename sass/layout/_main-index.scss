@@ -1,0 +1,109 @@
+.medios{
+        .titulop h1{
+            grid-area: titulop;
+            text-align:center;
+            font-weight:70px;
+            font-size: 60px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 40px;
+            color:midnightblue;
+            width: 1700px;
+            height: 70px;
+            }
+                .grid-container{
+                        display: grid;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        display: grid;
+                        width: 1700px;
+                        height: 1000px;
+                        gap: 20px;
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-rows:(4,1fr);
+                        grid-template-areas:
+                        "encab encab encab"
+                        "pie pie pie";
+                        }
+                        #grid-2{
+                            display: grid;
+                            width: 1700px;
+                            height: 100vh;
+                            grid-template-columns: repeat(4, 1fr);
+                            grid-template-rows: repeat(3, 1fr);
+                            grid-template-areas:
+                            "resto resto textos textos"
+                            "resto resto textos textos"
+                            "caroussel caroussel caroussel caroussel";
+                            } 
+                            .encab{
+                                grid-area: encab;
+                            }
+                                .grid-2{
+                                    grid-area: medios;
+                                    width: 1700px;
+                                    height: 700px;
+                                }
+                                .resto{
+                                    display: grid;
+                                    grid-area: resto;
+                                    flex-direction:column;
+                                    justify-content:flex-start;
+                                    width: 900px;
+                                    height:500px;
+                                    img{
+                                    width: 900px;
+                                    height:500px;
+                                    }
+                                    }
+                                .textos{
+                                    display:grid;
+                                    grid-area: textos;
+                                    flex-direction:column;
+                                    justify-content: flex-end;
+                                    grid-area: textos;
+                                    color: white;
+                                    background-color:cornflowerblue ;
+                                    width: 830px;
+                                    height: 500px;
+                                        h2{
+                                        display: flex;
+                                        flex-direction: column;
+                                        text-align:center;
+                                        font-family:'Roboto', sans-serif;
+                                        margin-top: 30px;
+                                        color:white;
+                                        font-size: 30px;
+                                        font-weight: 40px;
+                                            }
+                                            
+                                        h4{
+                                            display: flex;
+                                            flex-direction: column;
+                                            font-size: 20px;
+                                            font-weight: 20px;
+                                            font-family: 'Rubik Distressed', cursive;
+                                            margin: 20px;
+                                            padding-right:40px;
+                                                }
+                                            }
+                                    .container.col-md-6{
+                                        width: 700px;
+                                        height: 500px;
+                                    }
+                                    .caroussel{
+                                    display:grid;
+                                    grid-area: caroussel;
+                                    flex-direction: row;
+                                    justify-content:center;
+                                    width: 100%;
+                                    height: 500px;
+                                    padding: 20px;
+                                }
+
+
+
+
+
+
+
+                            }

@@ -1,0 +1,132 @@
+.experto{
+    width: 1700px;
+    height: 1500px;
+    display: flex;
+    flex-direction: row;
+}
+.titulo{
+    display: flex;
+    margin-right: 800px;
+}
+.titulo img{
+    direction: rigth;
+}
+.titulo a{
+    color: white;
+    flex-direction: rigth;
+}
+.tt h1{
+    text-align:center;
+    color:white;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+.nut h2{
+    color:white;
+    margin:20px;
+    font-size: 30px;
+    font-family:'Roboto', sans-serif;
+}
+main{
+    width: 1700px;
+    height: 100%;
+}
+.contador{
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+    "encab encab encab encab"
+    "tt tt tt tt"
+    "prof prof prof prof"
+    "concejos concejos concejos concejos"
+    "pie pie pie pie"
+    ;
+}
+.tt{
+    display: grid;
+    grid-area: tt;
+    grid-area:tt;
+    height: 70px;
+    width: 1700px;
+}
+.prof h2{
+    align-content:flex-start;
+    grid-area: prof;
+    flex-direction: row;
+    width: 500px;
+    height: 70px;
+    color:gold;
+    font-size: 40px;
+    font-weight: 30px;
+    font-family:'Roboto', sans-serif;
+}
+.robert-f img{
+    width: 500px;
+    height: 500px;
+    padding: 30px;
+}
+.robert-f{
+    display: grid;
+    grid-area:robert-f;
+    flex-direction:column;
+    width: 500px;
+    height: 300px;
+}
+.robert-f p{
+    background-color: darkgoldenrod;
+    font-size: 30px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 20px;
+    width:450px;
+    height: 50px;
+    text-align:center;
+}
+.nombre{
+    color: white;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+.concejos{
+    display: grid;
+    grid-area: concejos;
+    flex-direction: column;
+    font-size: 20px;
+    color: white;
+    margin-right:40px;
+    padding: 20px;
+    background-color: darkgoldenrod;
+    font-weight: 30px;
+    font-family: 'Rubik Distressed', cursive;
+    width: 800px;
+    height:1400px;
+}
+.experto{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: (4, 100px 100px 800px 800px );
+    grid-template-areas:
+    "prof prof concejos concejos"
+    "robert-f robert-f concejos concejos"
+    "none none concejos concejos"
+    "none none concejos concejos"
+    ;
+}
+.tt h1{
+    width: 1700px;
+    height: 70px;
+    color:cornflowerblue;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif;
+    background-color: darksalmon;
+    text-align: center;
+    padding: 10px;
+}

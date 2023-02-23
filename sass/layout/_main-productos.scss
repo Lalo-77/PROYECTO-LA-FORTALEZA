@@ -1,0 +1,136 @@
+.mai{ 
+    width: 2000px;
+    height:100vh;
+}
+.grupo-grid{
+    display: grid;
+    gap:20px;
+    width: 2600px;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: (3,70px 2000px 70px);
+    grid-template-areas:
+    "encab encab encab"
+    "mai mai mai"
+    "pie pie pie"
+    ;
+}
+.mai{
+    display: grid;
+    width: 100%;
+    height: 2600px;
+    grid-template-columns: repeat(3,1fr );
+    grid-template-rows: (7, 70px 70px 700px 70px 700px 700px);
+    grid-template-areas: 
+    "menu menu menu"
+    "tit-d tit-d tit-d"
+    "row row row"
+    "row row row"
+    "mas mas mas"
+    "row2 row2 row2"
+    "row3 row3 row3"
+    ;
+}
+.mai{
+    grid-area: mai;
+    display: grid;
+    align-content: center;
+    width: 1800px;
+    height: 2600px;
+}
+.encab{
+    grid-area: encab;
+    display: grid;
+    width: 1800px;
+    height: 70px;
+    background-color: #F4D03F;
+    background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+    padding: 40px;
+}
+.menu {
+    display: grid;
+    grid-area:menu;
+    width: 1800px;
+    height: 70px;
+}
+.menu h1{
+    background-color: darkorange;
+    color: white;
+    width: 400px;
+    height: 50px;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+h1{
+    padding-left: 20px ;  
+}
+.tit-d{
+    grid-area: tit-d;
+    display: grid;
+    width: 1000px;
+    height: 50px;
+    margin-left: 70px;
+}
+.tit-d h2{
+    background-color:rgba(240, 166, 75, 0.822);
+    text-align:left;
+    color: white;
+    font-weight: 40px;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    width: 1000px;
+    height: 50px;
+}
+.tit-d h2{
+    color: white;
+    text-align:center;
+    font-weight: 50px;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    background-color: darkorange;
+    width: 1440px;
+    height: 70px;
+    border-radius: 50px;
+}
+.row{
+    display: flex;
+    grid-area: row;
+    flex-direction: row;
+    width: 1800px;
+    height: 800px;
+    margin-left: 50px;
+    padding: 30px;
+    align-content: center;
+}
+.mas{
+    display: grid;
+    grid-area: mas; 
+    width: 1400px;
+    height: 70px;
+}
+.mas h3{
+    background-color: darkorange;
+    color: white;
+    width:1400px;
+    height: 50px;
+    border-radius: 50px;
+    margin-left: 70px;
+    padding-bottom: 10px;
+}
+.row2{
+    display: flex;
+    grid-area: row2;
+    flex-direction: row;
+    width: 1800px;
+    height: 800px;
+    margin-left: 70px;
+    padding-top: 20px;
+}
+.row3{
+    display: flex;
+    grid-area: row3;
+    flex-direction: row;
+    width: 1800px;
+    height: 800px;
+    margin-left: 70px;
+}

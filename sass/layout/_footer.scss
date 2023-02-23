@@ -1,44 +1,37 @@
-.pie{
-    grid-area: abajo;
-    display: flex;
-    border-bottom: 20px;
-    width: 1700px;
-    height: 70px;
-
-        .datos{
-            display: flex;
-            color: white;
-            gap: 20px;
-            list-style: none;
-            width: 1700px;
-            height: 70px;
-            background-color: rgba(209, 223, 19, 0.959);  
-    }
-    .datos h2{
+footer.pie{
+    .pie{
+        grid-area: pie;
         display: flex;
-        color: white;
-        gap: 20px;
-        list-style: none;
-        width: 1700px;
-        height: 70px;
-        background-color: rgba(209, 223, 19, 0.959);
-    }
-
-        .datos p{
-            color:white;
-            margin: 10px;
-            font-size: 30px;
-            font-family: 'Roboto', sans-serif;
-            margin-top: 10px;
-            margin-right: 10px;
-            background-color: rgba(209, 223, 19, 0.959);
+        gap: 30px;
+        width:1700px;
+        height:70px;
+        justify-content:flex-start;
+        background-color: #F4D03F;
+        background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
         }
-        .redes-sociales a{
-            justify-content: flex-end;
-            list-style: none;
-            background-color: rgba(209, 223, 19, 0.959);
-            margin-top: 20px;
-            margin-right: 30px;
+            .datos{
+                display: flex;
+                column-gap: 50px;
+                align-items: center;
+                color: black;
+                font-family:'Roboto', sans-serif;
+                p{
+                    font-size: 30px;
+                    font-weight: 40px;
+                    margin-top: 10px;
+                    h2{
+                    font-size: 30px;
+                    font-weight: 30px;
+                    }
+                }
+            }
+                .redes-sociales{
+                    display: flex;
+                    gap: 10px;
+                    justify-content:space-evenly;
+                    list-style:none;
+                    align-items: center;
+                    width: 100px; 
+                    height: 30px;
+                    }
         }
-
-} 
