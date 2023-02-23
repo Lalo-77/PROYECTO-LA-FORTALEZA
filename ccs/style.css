@@ -140,16 +140,20 @@ header.encab{
     height: 500px;
 }
 .textos h2{
+    display: flex;
+    flex-direction: column;
     text-align:center;
     font-family:'Roboto', sans-serif;
     margin-top: 30px;
-    color:black;
+    color:white;
     font-size: 30px;
     font-weight: 40px;
 }
 .textos h4{
-    font-size: 30px;
-    font-weight: 40px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 20px;
     font-family: 'Rubik Distressed', cursive;
     margin: 20px;
     padding-right:40px;
@@ -2545,7 +2549,7 @@ header.encab{
     width: 1700px;
     height: 100vh;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows:repeat(4,1fr);
+    grid-template-rows:repeat(4, 1fr);
     grid-template-areas:
     "encab encab encab encab"
     "comp comp comp comp"
@@ -2553,22 +2557,21 @@ header.encab{
     "pie pie pie pie"
     ;
 }
-.comp{
+.comp {
     grid-area: comp;
-    color:midnightblue;
+    color:wheat;
     width: 400px;
     height: 70px;
     font-size: 20px;
     font-weight: 20px;
     font-family: 'Roboto', sans-serif;
     border-radius: 50px;
-    background-color:darkseagreen;
+
 }
 .igual{
     grid-area: igual;
     width: 1700px;
     height: 1000px;
-    background-color: aqua;
 }
 .uuno{
     display: grid;
@@ -2596,56 +2599,68 @@ header.encab{
     display: flex;
     flex-direction: column;
     width: 550px;
-    height: 320px;
+    height: 500px;
     grid-area: dtos;
-    color: black;
+    color: white;
     background-color: #F4D03F;
     margin-top: 20px;
 }
 .cobr{
-    color: black;
+    color: white;
 }
 .ing h2{
     font-size: 30px;
     font-weight: 30px;
     width: 400px;
-    height: 100px;
+    height: 50px;
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: white;
 }
 .informac{
     width: 550px;
-    height: 100px;
+    height: 150px;
     font-size: 30px;
     font-weight: 30px;
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: white;
 }
 .doss{
     display: flex;
     flex-direction: column;
     grid-area: doss;
-    width: 550px;
-    height: 310px;
-    color: black;
+    width: 600px;
+    height: 500px;
+    color: white;
     margin: 20px;
     background-color: brown;
 }
 .añadir h3{
-    width: 200px;
+    margin-top: 20px;
+    width: 600px;
     height: 100px;
-    font-size: 20px;
-    font-weight: 20px;
-    font-family: 'Roboto', sans-serif;
-    color: black;
 }
 .datper{
-    width: 200px;
+    padding:20px;
+    width: 300px;
     height: 100px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 20px;
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: white;
+}
+.row{
+    width: 100px;
+    height: 10px;
+}
+h3{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 600px;
+    height: 30px;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 .cobr{
     width: 600px;
@@ -2653,29 +2668,18 @@ header.encab{
     font-size: 10px;
     font-weight: 10px;
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: white;
 }
 .cuentas{
     width: 550px;
     height: 300px;
 }
 .saldo{
-    color: black;
+    color: white;
 }
 .pag{
-    color: black;
+    color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
 /* LE DOY ESTILOS A EL FOOTER DE COMPRAS*/
 .pie{
     display: flex;
@@ -2715,7 +2719,9 @@ header.encab{
 }
 @media(max-width:768px){
     header.encab{
-        background-color:cyan ;
+        background-color:black;
+        width: 1700px;
+        height: 300px;
     }
     .logo a{
         color: cornflowerblue;
@@ -2729,32 +2735,152 @@ header.encab{
     align-items: center;
     }
     .navBar li a{
-        color: black;
+        color: white;
         font-size: 20px;
         background-position: 50px;
     }
     h1 {
         color:lightgreen ;
-        font-size: 40px;
+        font-size: 30px;
         text-align: center;
     }
-    .igual{
+    .ventas{
+        display: grid;
+        flex-flow: row wrap;
+        width: 1700px;
+        height: 100vh;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr) ;
         grid-template-areas:
-        "encab encab uuno"
-        "uuno uuno ubic"
-        "ubic pie pie"
+        "encab encab comp"
+        "comp comp igual"
+        "igual igual pie"
         ;
     }
-    .pie{
+    .comp{
+        display: flex;
+        grid-area: comp;
+        text-align: center;
+        width: 550px;
+        height: 50px;
+        font-size: 30px;
+        font-weight: 30px;
+        font-family: 'Roboto', sans-serif;
+        border-radius: 50px;
+    }
+    .igual{
+        grid-area: igual;
         width: 1700px;
+        height: 1000px;
+    }
+    #uuno{
+        display: grid;
+        width: 500px;
+        height: 100vh;
+        grid-template-columns: (3, 500px 500px 500px);
+        grid-template-rows:repeat(3, 500px);
+        grid-template-areas:
+        "contr dtos doss"
+        "contr dtos doss"
+        "contr dtos doss"
+        ;
+    }
+    .contr{
+        grid-area: contr;
+        width: 500px;
+        height: 700px;
+        padding: 20px;
+    }
+    .contr img{
+        width: 500px;
+        height: 500px;
+    }
+    .dtos{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: 500px;
+        color:lightsalmon;
+        background-color: #F4D03F;
+        margin-top: 20px;
+    }
+    .cobr{
+        color: lightsalmon;
+    }
+    .ing h2{
+        font-size: 20px;
+        font-weight: 20px;
+        width: 400px;
+        height: 50px;
+        font-family: 'Roboto', sans-serif;
+        color: lightsalmon;
+    }
+    .informac{
+        width: 400px;
+        height: 100px;
+        font-size: 20px;
+        font-weight: 20px;
+        font-family: 'Roboto', sans-serif;
+        color: lightsalmon;
+    }
+    .doss{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: 500px;
+        color: lightsalmon;
+        margin: 20px;
+        background-color: brown;
+    }
+    .añadir h3{
+        margin-top: 20px;
+        width: 500px;
+        height: 100px;
+    }
+    .datper{
+        padding:20px;
+        width: 300px;
+        height: 100px;
+        font-size: 20px;
+        font-weight: 20px;
+        font-family: 'Roboto', sans-serif;
+        color: lightsalmon;
+    }
+    h3{
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 500px;
+        height: 30px;
+        font-size: 20px;
+        font-weight: 20px;
+        font-family: 'Roboto', sans-serif;
+        color:olive;
+    }
+    .cobr{
+        width: 500px;
+        height: 310px;
+        font-size: 10px;
+        font-weight: 10px;
+        font-family: 'Roboto', sans-serif;
+        color: lightsalmon;
+    }
+    .cuentas{
+        width: 400px;
+        height: 300px;
+    }
+    .total{
+        color: lightsalmon
+    };
+    .pie{
+        width: 1200px;
         height: 70px;
     }
     }
     @media (max-width:320px){
     header.encab{
     background-color: chocolate;
+    width: 1700px;
+    height: 320px;
     }
     .logo a{
     color:dodgerblue;
@@ -2772,10 +2898,10 @@ header.encab{
         h1 {
             color:deepskyblue;
             text-align: center;
-            width: 200px;
-            height: 20px;
+            width: 400px;
+            height: 70px;
             font-size: 30px;
-            font-weight:40px;
+            font-weight:30px;
             font-family: 'Roboto', sans-serif;
         }
         h2 {
@@ -2787,16 +2913,135 @@ header.encab{
             font-weight:40px;
             font-family: 'Roboto', sans-serif;
         }
-        .igual{
-            grid-template-columns:(1 1fr);
-            grid-template-rows: 1fr 1fr 300px 200px 1fr 200px;
+        .ventas{
+            display: grid;
+            width: 1700px;
+            height:100vh;
+            grid-template-columns:(1 500px);
+            grid-template-rows: 500px 500px 300px 200px 1fr 200px;
             grid-template-areas:
             "encab"
-            "uuno"
-            "uuno"
-            "uuno"
+            "comp"
             "pie"
             ;
+        }
+        .comp{
+            grid-area: comp;
+            color:indigo;
+            width: 400px;
+            height: 70px;
+            font-size: 20px;
+            font-weight: 20px;
+            font-family: 'Roboto', sans-serif;
+            border-radius: 50px;
+            background-color:darkturquoise;
+        }
+        .igual{
+            grid-area: igual;
+            width: 1700px;
+            height: 1000px;
+        }
+        .uuno{
+            display: grid;
+            width: 1600px;
+            height: 100vh;
+            grid-template-columns: (3, 200px auto auto);
+            grid-template-rows:repeat(3, 200px);
+            grid-template-areas:
+            "contr dtos doss"
+            "contr dtos doss"
+            "contr dtos doss"
+            ;
+        }
+        .contr{
+            display: flex;
+            grid-area: contr;
+            width: 300px;
+            height: 700px;
+            padding: 20px;
+        }
+        .contr img{
+            width: 300px;
+            height: 500px;
+        }
+        .dtos{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 500px;
+            grid-area: dtos;
+            color:lightsteelblue;
+            background-color: #F4D03F;
+            margin-top: 20px;
+        }
+        .cobr{
+            color: lightsteelblue;
+        }
+        .ing h2{
+            font-size: 30px;
+            font-weight: 30px;
+            width: 300px;
+            height: 50px;
+            font-family: 'Roboto', sans-serif;
+            color: lightsteelblue;
+        }
+        .informac{
+            width: 300px;
+            height: 150px;
+            font-size: 30px;
+            font-weight: 30px;
+            font-family: 'Roboto', sans-serif;
+            color: lightsteelblue;
+        }
+        .doss{
+            display: flex;
+            flex-direction: column;
+            grid-area: doss;
+            width: 300px;
+            height: 500px;
+            color: lightsteelblue;
+            margin: 20px;
+            background-color: brown;
+        }
+        .añadir h3{
+            margin-top: 20px;
+            width: 300px;
+            height: 100px;
+        }
+        .datper{
+            padding:20px;
+            width: 300px;
+            height: 100px;
+            font-size: 25px;
+            font-weight: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: lightsteelblue;
+        }
+        .row{
+            width: 100px;
+            height: 10px;
+        }
+        h3{
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 300px;
+            height: 30px;
+            font-size: 30px;
+            font-weight: 30px;
+            font-family: 'Roboto', sans-serif;
+            color:darkgoldenrod;
+        }
+        .cobr{
+            width: 300px;
+            height: 310px;
+            font-size: 10px;
+            font-weight: 10px;
+            font-family: 'Roboto', sans-serif;
+            color:lightsteelblue;
+        }
+        .cuentas{
+            width: 300px;
+            height: 300px;
         }
         .pie{
             width: 1700px;
