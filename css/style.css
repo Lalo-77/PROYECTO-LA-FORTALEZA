@@ -1,3 +1,10 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&family=Rubik+Distressed&family=Rubik+Microbe&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,300;1,400&family=Ubuntu:wght@700&family=Work+Sans:wght@200;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 header.encab {
   background-color: #F4D03F;
   background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
@@ -36,99 +43,92 @@ header.encab {
         width: 30px;
         height: 30px; }
 
-.medios .titulop h1 {
-  grid-area: titulop;
-  text-align: center;
-  font-weight: 70px;
-  font-size: 60px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 40px;
-  color: midnightblue;
-  width: 1700px;
-  height: 70px; }
-
-.medios .grid-container {
-  display: grid;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  display: grid;
-  width: 1700px;
-  height: 1000px;
-  gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 4, 1fr;
-  grid-template-areas: "encab encab encab"
- "pie pie pie"; }
-
-.medios #grid-2 {
-  display: grid;
-  width: 1700px;
-  height: 100vh;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "resto resto textos textos"
- "resto resto textos textos"
- "caroussel caroussel caroussel caroussel"; }
-
-.medios .encab {
-  grid-area: encab; }
-
-.medios .grid-2 {
-  grid-area: medios;
-  width: 1700px;
-  height: 700px; }
-
-.medios .resto {
-  display: grid;
-  grid-area: resto;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 900px;
-  height: 500px; }
-  .medios .resto img {
+.medios {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  background-position: center; }
+  .medios .titulop h1 {
+    grid-area: titulop;
+    text-align: center;
+    font-weight: 70px;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    color: midnightblue;
+    width: 1700px;
+    height: 70px; }
+  .medios .grid-container {
+    display: grid;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    display: grid;
+    width: 1700px;
+    height: 1000px;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4, 1fr;
+    grid-template-areas: "encab encab encab" "pie pie pie"; }
+  .medios #grid-2 {
+    display: grid;
+    width: 1700px;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "resto resto textos textos" "resto resto textos textos" "caroussel caroussel caroussel caroussel"; }
+  .medios .encab {
+    grid-area: encab; }
+  .medios .grid-2 {
+    grid-area: medios;
+    width: 1700px;
+    height: 700px; }
+  .medios .resto {
+    display: grid;
+    grid-area: resto;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 900px;
     height: 500px; }
-
-.medios .textos {
-  display: grid;
-  grid-area: textos;
-  flex-direction: column;
-  justify-content: flex-end;
-  grid-area: textos;
-  color: white;
-  background-color: cornflowerblue;
-  width: 830px;
-  height: 500px; }
-  .medios .textos h2 {
-    display: flex;
+    .medios .resto img {
+      width: 900px;
+      height: 500px; }
+  .medios .textos {
+    display: grid;
+    grid-area: textos;
     flex-direction: column;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 30px;
+    justify-content: flex-end;
+    grid-area: textos;
     color: white;
-    font-size: 30px;
-    font-weight: 40px; }
-  .medios .textos h4 {
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    font-weight: 20px;
-    font-family: 'Rubik Distressed', cursive;
-    margin: 20px;
-    padding-right: 40px; }
-
-.medios .container.col-md-6 {
-  width: 700px;
-  height: 500px; }
-
-.medios .caroussel {
-  display: grid;
-  grid-area: caroussel;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  height: 500px;
-  padding: 20px; }
+    background-color: cornflowerblue;
+    width: 830px;
+    height: 500px; }
+    .medios .textos h2 {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      margin-top: 30px;
+      color: white;
+      font-size: 30px;
+      font-weight: 40px; }
+    .medios .textos h4 {
+      display: flex;
+      flex-direction: column;
+      font-size: 20px;
+      font-weight: 20px;
+      font-family: 'Rubik Distressed', cursive;
+      margin: 20px;
+      padding-right: 40px; }
+  .medios .container.col-md-6 {
+    width: 700px;
+    height: 500px; }
+  .medios .caroussel {
+    display: grid;
+    grid-area: caroussel;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+    padding: 20px; }
 
 footer.pie .pie {
   grid-area: pie;
@@ -162,3 +162,1469 @@ footer.pie .redes-sociales {
   align-items: center;
   width: 100px;
   height: 30px; }
+
+@media (max-width: 320px) {
+  header.encab {
+    background-color: chocolate;
+    height: 150px;
+    width: 100%; }
+  .logo a {
+    color: dodgerblue; }
+  .navBar {
+    align-items: flex-start; }
+    .navBar li a {
+      color: black;
+      font-size: 20px; }
+      .navBar li a:hover {
+        color: greenyellow; }
+  .titulop {
+    color: deepskyblue;
+    text-align: center;
+    width: 200px;
+    height: 20px;
+    font-size: 30px;
+    font-weight: 40px;
+    font-family: 'Roboto', sans-serif; }
+  .grid-container {
+    width: 50%;
+    height: 500px;
+    grid-template-columns: 1 1fr;
+    grid-template-rows: 1fr 1fr 300px 200px 1fr 200px;
+    grid-template-areas: "encab" "titulop" "medios" "pie"; }
+  #grid-2 {
+    width: 50%;
+    height: 500px;
+    grid-template-columns: 1 1fr;
+    grid-template-rows: 1fr 1fr 300px 200px 1fr 200px;
+    grid-template-areas: "resto" "textos" "caroussel"; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 768px) {
+  .encab {
+    background-color: black;
+    width: 1700px;
+    height: 300px; }
+  .logo a {
+    color: cornflowerblue; }
+  .navBar li a:hover {
+    color: gold; }
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: darkblue; }
+  .navBar li a {
+    color: white;
+    font-size: 20px;
+    background-position: 50px; }
+  .titulo h2 {
+    color: lightgreen;
+    font-size: 40px;
+    align-items: center;
+    width: 1700px;
+    height: 70px; }
+  .img {
+    width: 400px;
+    height: 250px; }
+  .texto h3 {
+    color: grey;
+    background-color: aquamarine;
+    font-weight: 20px;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    justify-content: center;
+    width: 1000px;
+    height: 70px; }
+  .texto h5 {
+    width: 1000px;
+    height: 1400px;
+    background-color: aquamarine;
+    font-family: 'Rubik Distressed', cursive;
+    color: grey;
+    font-weight: 30px;
+    font-size: 25px;
+    text-align: justify; }
+  .resaltado {
+    color: grey; }
+  .grid-container {
+    display: grid;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "encab encab titulo" "medio medio medio" "container container pie"; }
+  .medio {
+    display: grid;
+    width: 100px;
+    height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "imagen texto texto" "imagen texto texto"; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 320px) {
+  header.encab {
+    background-color: chocolate; }
+  .logo a {
+    color: dodgerblue; }
+  .navBar li a:hover {
+    background-color: greenyellow; }
+  .navBar {
+    align-items: flex-start; }
+  .navBar li a {
+    color: black;
+    font-size: 20px; }
+  h3 {
+    color: deepskyblue;
+    text-align: center;
+    width: 500px;
+    height: 100px;
+    font-size: 30px;
+    font-weight: 40px;
+    font-family: 'Roboto', sans-serif; }
+  .medallon {
+    grid-template-columns: 1 1fr;
+    grid-template-rows: 1fr 1fr 300px 200px 1fr 200px;
+    grid-template-areas: "encab" "tit" "med" "med" "med" "pie"; }
+  .med {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "imagen" "imag2" "texto1"; }
+  .med {
+    width: 1700px;
+    height: 1700px; }
+  .imagen img {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 30px;
+    width: 500px;
+    height: 500px; }
+  .imag2 img {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    padding: 10px;
+    margin-top: 10px; }
+  .texto1 {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 30px;
+    font-family: 'Rubik Distressed', cursive;
+    background-color: cornflowerblue;
+    font-size: 25px;
+    font-weight: 20px;
+    width: 700px;
+    height: 1200px;
+    border-radius: 30px; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 320px) {
+  header.encab {
+    background-color: chocolate; }
+  .logo a {
+    color: dodgerblue; }
+  .navBar li a:hover {
+    background-color: greenyellow; }
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .navBar li a {
+    color: black;
+    font-size: 20px; }
+  .menu h1 {
+    color: deepskyblue;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    font-size: 30px;
+    font-weight: 40px;
+    font-family: 'Roboto', sans-serif;
+    background-color: darkkhaki; }
+  .menu h2 {
+    color: deepskyblue;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    font-size: 30px;
+    font-weight: 40px;
+    font-family: 'Roboto', sans-serif;
+    background-color: darkkhaki; }
+  .grupo-grid {
+    display: grid;
+    width: 30%;
+    height: 1500px;
+    grid-template-columns: 1 1fr;
+    grid-template-rows: 1fr 1fr 200px 100px 1fr 100px;
+    grid-template-areas: "encab" "menu" "tit-d" "mai" "pie"; }
+  .row {
+    display: flex;
+    flex-direction: column; }
+  .mai {
+    display: grid;
+    width: 30%;
+    height: 1500px;
+    grid-template-columns: 1, 1fr;
+    grid-template-rows: 8, 70px 50px 700px 70px 700px 50px 700px;
+    grid-template-areas: "menu" "tit-d" "row" "row" "mas" "row2" "row3"; }
+  .mas h3 {
+    background-color: darkkhaki;
+    color: deepskyblue;
+    width: 1700px;
+    height: 50px; }
+  .row2 {
+    display: flex;
+    flex-direction: column;
+    width: 1700px;
+    height: 800px; }
+  .row3 {
+    display: flex;
+    flex-direction: column;
+    width: 1700px;
+    height: 800px;
+    margin-left: 80px; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 320px) {
+  header.encab {
+    background-color: chocolate; }
+  .logo a {
+    color: dodgerblue; }
+  .navBar li a:hover {
+    background-color: greenyellow; }
+  .navBar {
+    align-items: flex-start; }
+  .navBar li a {
+    color: black;
+    font-size: 20px; }
+  h1 {
+    color: lawngreen;
+    text-align: center;
+    width: 200px;
+    height: 20px;
+    font-size: 30px;
+    font-weight: 40px;
+    font-family: 'Roboto', sans-serif; }
+  .contador {
+    grid-template-columns: 1 1fr;
+    grid-template-rows: 1fr 1fr 300px 200px 1fr 200px;
+    grid-template-areas: "encab" "tt" "prof" "concejos" "pie"; }
+  .experto {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1, 100px 100px 800px 800px;
+    grid-template-areas: "prof" "concejos" "robert-f"; }
+  .prof h2 {
+    align-content: center;
+    grid-area: prof;
+    flex-direction: column;
+    width: 500px;
+    height: 70px;
+    color: brown;
+    font-size: 40px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif; }
+  .robert-f {
+    display: grid;
+    grid-area: robert-f;
+    flex-direction: column;
+    width: 400px;
+    height: 200px; }
+  .robert-f img {
+    width: 400px;
+    height: 200px;
+    padding: 30px; }
+  .concejos {
+    display: grid;
+    grid-area: concejos;
+    flex-direction: column;
+    font-size: 20px;
+    color: black;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: dodgerblue;
+    font-weight: 30px;
+    font-family: 'Rubik Distressed', cursive;
+    width: 500px;
+    height: 1400px; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 320px) {
+  header.encab {
+    background-color: chocolate;
+    width: 1700px;
+    height: 320px; }
+  .logo a {
+    color: dodgerblue; }
+  .navBar li a:hover {
+    background-color: greenyellow; }
+  .navBar {
+    align-items: flex-start; }
+  .navBar li a {
+    color: black;
+    font-size: 20px; }
+  h1 {
+    color: deepskyblue;
+    text-align: center;
+    width: 400px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif; }
+  h2 {
+    color: deepskyblue;
+    text-align: center;
+    width: 200px;
+    height: 20px;
+    font-size: 30px;
+    font-weight: 40px;
+    font-family: 'Roboto', sans-serif; }
+  .ventas {
+    display: grid;
+    width: 1700px;
+    height: 100vh;
+    grid-template-columns: 1 500px;
+    grid-template-rows: 500px 500px 300px 200px 1fr 200px;
+    grid-template-areas: "encab" "comp" "pie"; }
+  .comp {
+    grid-area: comp;
+    color: indigo;
+    width: 400px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 50px;
+    background-color: darkturquoise; }
+  .igual {
+    grid-area: igual;
+    width: 1700px;
+    height: 1000px; }
+  .uuno {
+    display: grid;
+    width: 1600px;
+    height: 100vh;
+    grid-template-columns: 3, 200px auto auto;
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas: "contr dtos doss" "contr dtos doss" "contr dtos doss"; }
+  .contr {
+    display: flex;
+    grid-area: contr;
+    width: 300px;
+    height: 700px;
+    padding: 20px; }
+  .contr img {
+    width: 300px;
+    height: 500px; }
+  .dtos {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    grid-area: dtos;
+    color: lightsteelblue;
+    background-color: #F4D03F;
+    margin-top: 20px; }
+  .cobr {
+    color: lightsteelblue; }
+  .ing h2 {
+    font-size: 30px;
+    font-weight: 30px;
+    width: 300px;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: lightsteelblue; }
+  .informac {
+    width: 300px;
+    height: 150px;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: lightsteelblue; }
+  .doss {
+    display: flex;
+    flex-direction: column;
+    grid-area: doss;
+    width: 300px;
+    height: 500px;
+    color: lightsteelblue;
+    margin: 20px;
+    background-color: brown; }
+  .añadir h3 {
+    margin-top: 20px;
+    width: 300px;
+    height: 100px; }
+  .datper {
+    padding: 20px;
+    width: 300px;
+    height: 100px;
+    font-size: 25px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: lightsteelblue; }
+  .row {
+    width: 100px;
+    height: 10px; }
+  h3 {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 300px;
+    height: 30px;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: darkgoldenrod; }
+  .cobr {
+    width: 300px;
+    height: 310px;
+    font-size: 10px;
+    font-weight: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: lightsteelblue; }
+  .cuentas {
+    width: 300px;
+    height: 300px; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 320px) {
+  header.encab {
+    background-color: chocolate;
+    width: 1700px;
+    height: 320px; }
+  .logo a {
+    color: dodgerblue; }
+  .navBar li a:hover {
+    background-color: greenyellow; }
+  .navBar {
+    align-items: flex-start; }
+  .navBar li a {
+    color: black;
+    font-size: 20px; }
+  h1 {
+    color: deepskyblue;
+    text-align: center;
+    width: 400px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif; }
+  h2 {
+    color: deepskyblue;
+    text-align: center;
+    width: 200px;
+    height: 20px;
+    font-size: 30px;
+    font-weight: 40px;
+    font-family: 'Roboto', sans-serif; }
+  .ventas {
+    display: grid;
+    width: 1700px;
+    height: 100vh;
+    grid-template-columns: 1 500px;
+    grid-template-rows: 500px 500px 300px 200px 1fr 200px;
+    grid-template-areas: "encab" "comp" "pie"; }
+  .comp {
+    grid-area: comp;
+    color: indigo;
+    width: 400px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 50px;
+    background-color: darkturquoise; }
+  .igual {
+    grid-area: igual;
+    width: 1700px;
+    height: 1000px; }
+  .uuno {
+    display: grid;
+    width: 1600px;
+    height: 100vh;
+    grid-template-columns: 3, 200px auto auto;
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas: "contr dtos doss" "contr dtos doss" "contr dtos doss"; }
+  .contr {
+    display: flex;
+    grid-area: contr;
+    width: 300px;
+    height: 700px;
+    padding: 20px; }
+  .contr img {
+    width: 300px;
+    height: 500px; }
+  .dtos {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    grid-area: dtos;
+    color: lightsteelblue;
+    background-color: #F4D03F;
+    margin-top: 20px; }
+  .cobr {
+    color: lightsteelblue; }
+  .ing h2 {
+    font-size: 30px;
+    font-weight: 30px;
+    width: 300px;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: lightsteelblue; }
+  .informac {
+    width: 300px;
+    height: 150px;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: lightsteelblue; }
+  .doss {
+    display: flex;
+    flex-direction: column;
+    grid-area: doss;
+    width: 300px;
+    height: 500px;
+    color: lightsteelblue;
+    margin: 20px;
+    background-color: brown; }
+  .añadir h3 {
+    margin-top: 20px;
+    width: 300px;
+    height: 100px; }
+  .datper {
+    padding: 20px;
+    width: 300px;
+    height: 100px;
+    font-size: 25px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: lightsteelblue; }
+  .row {
+    width: 100px;
+    height: 10px; }
+  h3 {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 300px;
+    height: 30px;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: darkgoldenrod; }
+  .cobr {
+    width: 300px;
+    height: 310px;
+    font-size: 10px;
+    font-weight: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: lightsteelblue; }
+  .cuentas {
+    width: 300px;
+    height: 300px; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 768px) {
+  header.encab {
+    background-color: black;
+    width: 1700px;
+    height: 300px; }
+  .logo a {
+    color: cornflowerblue; }
+  .navBar {
+    flex-direction: column;
+    align-items: center; }
+    .navBar li a {
+      color: white;
+      font-size: 20px;
+      background-position: 50px; }
+      .navBar li a:hover {
+        color: gold; } }
+
+.titulop {
+  color: lightgreen;
+  font-size: 30px;
+  text-align: center; }
+
+.grid-container {
+  display: grid;
+  flex-flow: row wrap;
+  width: 1700px;
+  height: 2000px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "encab encab titulop" "medios medios medios" "caroussel caroussel pie"; }
+
+#grid-2 {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "resto textos textos" "resto textos textos" "caroussel caroussel caroussel"; }
+  #grid-2 #grid-2 {
+    display: grid;
+    width: 1700px;
+    height: 1000px; }
+
+.resto {
+  display: grid;
+  width: 100%;
+  height: 400px; }
+
+.textos {
+  display: grid;
+  width: 100%;
+  height: 400px; }
+  .textos h2 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    color: black;
+    font-size: 20px;
+    font-weight: 20px; }
+    .textos h2 h4 {
+      font-size: 20px;
+      font-weight: 20px;
+      font-family: 'Rubik Distressed', cursive;
+      margin: 20px;
+      padding-right: 30p; }
+
+.caroussel {
+  display: grid;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20p; }
+
+.pie {
+  width: 1700px;
+  height: 70px; }
+
+@media (max-width: 768px) {
+  .encab {
+    background-color: black;
+    width: 1700px;
+    height: 300px; }
+  .logo a {
+    color: cornflowerblue; }
+  .navBar li a:hover {
+    color: gold; }
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: darkblue; }
+  .navBar li a {
+    color: white;
+    font-size: 20px;
+    background-position: 50px; }
+  .titulo h2 {
+    color: lightgreen;
+    font-size: 40px;
+    align-items: center;
+    width: 1700px;
+    height: 70px; }
+  .img {
+    width: 400px;
+    height: 250px; }
+  .texto h3 {
+    color: grey;
+    background-color: aquamarine;
+    font-weight: 20px;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    justify-content: center;
+    width: 1000px;
+    height: 70px; }
+  .texto h5 {
+    width: 1000px;
+    height: 1400px;
+    background-color: aquamarine;
+    font-family: 'Rubik Distressed', cursive;
+    color: grey;
+    font-weight: 30px;
+    font-size: 25px;
+    text-align: justify; }
+  .resaltado {
+    color: grey; }
+  .grid-container {
+    display: grid;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "encab encab titulo" "medio medio medio" "container container pie"; }
+  .medio {
+    display: grid;
+    width: 100px;
+    height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "imagen texto texto" "imagen texto texto"; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 768px) {
+  header.encab {
+    background-color: cyan; }
+  .logo a {
+    color: cornflowerblue; }
+  .navBar li a:hover {
+    color: gold; }
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .navBar li a {
+    color: black;
+    font-size: 20px;
+    background-position: 50px; }
+  .tit h3 {
+    color: white;
+    font-weight: 30px;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 40px;
+    text-align: center;
+    background-color: coral;
+    width: 1000px;
+    height: 70px; }
+  .medallon {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "encab encab tit" "med med" "pie pie pie"; }
+  .med {
+    display: grid;
+    grid-template-columns: 3, 1fr;
+    grid-template-rows: 2, 1fr;
+    grid-template-areas: "imagen texto1 texto1" "imag2 texto1 texto1"; }
+  .imagen img {
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 40px;
+    width: 500px;
+    height: 500px; }
+  .imag2 img {
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    padding: 10px;
+    margin-top: 10px; }
+  .texto1 {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    font-size: 30px;
+    font-family: 'Rubik Distressed', cursive;
+    margin-left: 30px;
+    background-color: darkseagreen;
+    font-size: 40px;
+    font-weight: 35px;
+    width: 1000px;
+    height: 1600px;
+    border-radius: 30px;
+    padding: 20px; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 768px) {
+  header.encab {
+    background-color: cyan; }
+  .logo a {
+    color: cornflowerblue; }
+  .navBar li a:hover {
+    color: gold; }
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .navBar li a {
+    color: black;
+    font-size: 20px;
+    background-position: 50px; }
+  .tit h3 {
+    color: white;
+    font-weight: 30px;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 40px;
+    text-align: center;
+    background-color: coral;
+    width: 1000px;
+    height: 70px; }
+  .medallon {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "encab encab tit" "med med" "pie pie pie"; }
+  .med {
+    display: grid;
+    grid-template-columns: 3, 1fr;
+    grid-template-rows: 2, 1fr;
+    grid-template-areas: "imagen texto1 texto1" "imag2 texto1 texto1"; }
+  .imagen img {
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 40px;
+    width: 500px;
+    height: 500px; }
+  .imag2 img {
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    padding: 10px;
+    margin-top: 10px; }
+  .texto1 {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    font-size: 30px;
+    font-family: 'Rubik Distressed', cursive;
+    margin-left: 30px;
+    background-color: darkseagreen;
+    font-size: 40px;
+    font-weight: 35px;
+    width: 1000px;
+    height: 1600px;
+    border-radius: 30px;
+    padding: 20px; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 768px) {
+  header.encab {
+    background-color: cyan; }
+  .logo a {
+    color: cornflowerblue; }
+  .navBar li a:hover {
+    color: gold; }
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .navBar li a {
+    color: black;
+    font-size: 20px;
+    background-position: 50px; }
+  .menu {
+    color: darkkhaki;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif; }
+  h1 {
+    background-color: darkkhaki; }
+  .tit-d {
+    color: darkkhaki;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif; }
+  .grupo-grid {
+    display: grid;
+    gap: 20px;
+    width: 1500px;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "encab encab mai" "mai mai none" "pie pie pie"; }
+  .mai {
+    display: grid;
+    width: 100%;
+    height: 1500px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 7, 70px 70px 700px 70px 700px 700px;
+    grid-template-areas: "menu menu menu" "tit-d tit-d tit-d" "row row row" "row row row" "row2 row2 row2" "row3 row3 row3"; }
+  .row3 {
+    display: flex;
+    grid-area: row3;
+    flex-direction: row;
+    width: 1800px;
+    height: 800px;
+    margin-left: 80px; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 768px) {
+  header.encab {
+    background-color: cyan; }
+  .logo a {
+    color: cornflowerblue; }
+  .navBar li a:hover {
+    color: gold; }
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .navBar li a {
+    color: black;
+    font-size: 20px;
+    background-position: 50px; }
+  .relac {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "encab encab medi" "medi medi medi" "medi pie pie"; }
+  .medi {
+    display: grid;
+    width: 1700px;
+    height: 1500px;
+    grid-template-columns: repeat(3, 850px);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "clientes clientes clientes"  "amigable ubic ubic" "amigable ubic ubic"; }
+  .clientes {
+    display: grid;
+    grid-area: clientes;
+    text-align: center;
+    background-color: cornflowerblue;
+    color: goldenrod;
+    width: 600px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 50px; }
+  .uno {
+    background-color: cyan;
+    width: 820px;
+    height: 450px; }
+  .inter {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 30px;
+    width: 500x;
+    height: 70px;
+    margin: 30px; }
+  h2 {
+    flex-direction: rigth;
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 30px;
+    text-align: justify;
+    width: 700px;
+    height: 50px;
+    margin: 30px; }
+  .dos {
+    background-color: cyan;
+    padding-left: 40px;
+    width: 800px;
+    height: 500px; }
+  .conc h4 {
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: rigth;
+    width: 500px;
+    height: 100px; }
+  .concurso h4 {
+    color: deepskyblue;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 20px;
+    width: 500px;
+    height: 70px;
+    margin: 20px; }
+  .suma {
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: deepskyblue; }
+  .preg {
+    display: flex;
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: deepskyblue; }
+  .canje {
+    width: 750px;
+    height: 300px; }
+  h3 {
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .datper {
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .resp {
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .resp2 {
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .resp3 {
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .mapa {
+    width: 850px;
+    height: 800px; }
+  .ubic {
+    grid-area: ubic;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 850px;
+    height: 800px;
+    padding: 30px;
+    margin-top: 90px; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 768px) {
+  header.encab {
+    background-color: cyan; }
+  .logo a {
+    color: cornflowerblue; }
+  .navBar li a:hover {
+    color: gold; }
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .navBar li a {
+    color: black;
+    font-size: 20px;
+    background-position: 50px; }
+  .relac {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "encab encab medi" "medi medi medi" "medi pie pie"; }
+  .medi {
+    display: grid;
+    width: 1700px;
+    height: 1500px;
+    grid-template-columns: repeat(3, 850px);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "clientes clientes clientes"  "amigable ubic ubic" "amigable ubic ubic"; }
+  .clientes {
+    display: grid;
+    grid-area: clientes;
+    text-align: center;
+    background-color: cornflowerblue;
+    color: goldenrod;
+    width: 600px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 50px; }
+  .uno {
+    background-color: cyan;
+    width: 820px;
+    height: 450px; }
+  .inter {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 30px;
+    width: 500x;
+    height: 70px;
+    margin: 30px; }
+  h2 {
+    flex-direction: rigth;
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 30px;
+    text-align: justify;
+    width: 700px;
+    height: 50px;
+    margin: 30px; }
+  .dos {
+    background-color: cyan;
+    padding-left: 40px;
+    width: 800px;
+    height: 500px; }
+  .conc h4 {
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: rigth;
+    width: 500px;
+    height: 100px; }
+  .concurso h4 {
+    color: deepskyblue;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 20px;
+    width: 500px;
+    height: 70px;
+    margin: 20px; }
+  .suma {
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: deepskyblue; }
+  .preg {
+    display: flex;
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: deepskyblue; }
+  .canje {
+    width: 750px;
+    height: 300px; }
+  h3 {
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .datper {
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .resp {
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .resp2 {
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .resp3 {
+    color: deepskyblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .mapa {
+    width: 850px;
+    height: 800px; }
+  .ubic {
+    grid-area: ubic;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 850px;
+    height: 800px;
+    padding: 30px;
+    margin-top: 90px; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 320px) {
+  header.encab {
+    background-color: chocolate; }
+  .logo a {
+    color: dodgerblue; }
+  .navBar li a:hover {
+    color: greenyellow; }
+  .navBar {
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+    height: 300px; }
+  .navBar li a {
+    color: black;
+    font-size: 20px;
+    background-position: 50px; }
+  .relac {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "encab" "medi" "pie"; }
+  .medi {
+    display: grid;
+    width: 1700px;
+    height: 1500px;
+    grid-template-columns: repeat(3, 850px);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "clientes"  "amigable" "ubic"; }
+  .clientes {
+    display: flex;
+    grid-area: clientes;
+    text-align: center;
+    background-color: cyan;
+    color: black;
+    width: 500px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 50px; }
+  h1 {
+    border-radius: 50px; }
+  .uno {
+    background-color: cyan;
+    width: 800px;
+    height: 500px; }
+  .inter {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 30px;
+    width: 800x;
+    height: 70px;
+    margin: 30px; }
+  h2 {
+    display: flex;
+    flex-direction: rigth;
+    color: darkseagreen;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 10px;
+    text-align: justify;
+    width: 700px;
+    height: 50px;
+    margin: 30px; }
+  .dos {
+    background-color: cyan;
+    padding-left: 40px;
+    width: 800px;
+    height: 500px; }
+  .conc h4 {
+    color: darkseagreen;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: rigth;
+    width: 500px;
+    height: 100px; }
+  .concurso h4 {
+    color: darkseagreen;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px;
+    width: 500px;
+    height: 70px;
+    margin: 20px; }
+  .suma {
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: darkseagreen;
+    width: 500px;
+    height: 400px; }
+  .preg {
+    display: flex;
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: darkseagreen;
+    width: 700px;
+    height: 500px; }
+  .canje {
+    width: 700px;
+    height: 300px; }
+  h3 {
+    color: darkseagreen;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .datper {
+    color: darkseagreen;
+    text-align: center;
+    width: 700px;
+    height: 100px;
+    font-size: 30px;
+    font-weight: 40px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px; }
+  .resp {
+    color: darkseagreen;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .resp2 {
+    color: darkseagreen;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .resp3 {
+    color: dark;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 20px; }
+  .mapa {
+    grid-area: ubic;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 500px; }
+  .ubic {
+    grid-area: ubic;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 500px;
+    padding: 30px;
+    margin-top: 90px; }
+  .pie {
+    width: 1700px;
+    height: 70px; } }
+
+@media (max-width: 768px) {
+  header.encab {
+    background-color: black;
+    width: 1700px;
+    height: 300px; }
+  .logo a {
+    color: cornflowerblue; }
+  .navBar li a:hover {
+    color: gold; }
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .navBar li a {
+    color: white;
+    font-size: 20px;
+    background-position: 50px; }
+  h1 {
+    color: lightgreen;
+    font-size: 30px;
+    text-align: center; }
+  .ventas {
+    display: grid;
+    flex-flow: row wrap;
+    width: 1700px;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "encab encab comp" "comp comp igual" "igual igual pie"; }
+  .comp {
+    display: flex;
+    grid-area: comp;
+    text-align: center;
+    width: 550px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 50px; }
+  .igual {
+    grid-area: igual;
+    width: 1700px;
+    height: 1000px; }
+  #uuno {
+    display: grid;
+    width: 500px;
+    height: 100vh;
+    grid-template-columns: 3, 500px 500px 500px;
+    grid-template-rows: repeat(3, 500px);
+    grid-template-areas: "contr dtos doss" "contr dtos doss" "contr dtos doss"; }
+  .contr {
+    grid-area: contr;
+    width: 500px;
+    height: 700px;
+    padding: 20px; }
+  .contr img {
+    width: 500px;
+    height: 500px; }
+  .dtos {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    color: lightsalmon;
+    background-color: #F4D03F;
+    margin-top: 20px; }
+  .cobr {
+    color: lightsalmon; }
+  .ing h2 {
+    font-size: 20px;
+    font-weight: 20px;
+    width: 400px;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: lightsalmon; }
+  .informac {
+    width: 400px;
+    height: 100px;
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: lightsalmon; }
+  .doss {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    color: lightsalmon;
+    margin: 20px;
+    background-color: brown; }
+  .añadir h3 {
+    margin-top: 20px;
+    width: 500px;
+    height: 100px; }
+  .datper {
+    padding: 20px;
+    width: 300px;
+    height: 100px;
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: lightsalmon; }
+  h3 {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: olive; }
+  .cobr {
+    width: 500px;
+    height: 310px;
+    font-size: 10px;
+    font-weight: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: lightsalmon; }
+  .cuentas {
+    width: 400px;
+    height: 300px; }
+  .total {
+    color: lightsalmon; }
+  .pie {
+    width: 1200px;
+    height: 70px; } }
