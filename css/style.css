@@ -43,92 +43,96 @@ header.encab {
         width: 30px;
         height: 30px; }
 
-.medios {
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-  background-position: center; }
-  .medios .titulop h1 {
-    grid-area: titulop;
-    text-align: center;
-    font-weight: 70px;
-    font-size: 60px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 40px;
-    color: midnightblue;
-    width: 1700px;
-    height: 70px; }
-  .medios .grid-container {
-    display: grid;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    display: grid;
-    width: 1700px;
-    height: 1000px;
-    gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 4, 1fr;
-    grid-template-areas: "encab encab encab" "pie pie pie"; }
-  .medios #grid-2 {
-    display: grid;
-    width: 1700px;
-    height: 100vh;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "resto resto textos textos" "resto resto textos textos" "caroussel caroussel caroussel caroussel"; }
-  .medios .encab {
-    grid-area: encab; }
-  .medios .grid-2 {
-    grid-area: medios;
-    width: 1700px;
-    height: 700px; }
-  .medios .resto {
-    display: grid;
-    grid-area: resto;
-    flex-direction: column;
-    justify-content: flex-start;
+.medios .titulop h1 {
+  grid-area: titulop;
+  text-align: center;
+  font-weight: 70px;
+  font-size: 60px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  color: midnightblue;
+  width: 1700px;
+  height: 70px; }
+
+.medios .grid-container {
+  display: grid;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  display: grid;
+  width: 1700px;
+  height: 1000px;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 4, 1fr;
+  grid-template-areas: "encab encab encab" "pie pie pie"; }
+
+.medios #grid-2 {
+  display: grid;
+  width: 1700px;
+  height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "resto resto textos textos" "resto resto textos textos" "caroussel caroussel caroussel caroussel"; }
+
+.medios .encab {
+  grid-area: encab; }
+
+.medios .grid-2 {
+  grid-area: medios;
+  width: 1700px;
+  height: 700px; }
+
+.medios .resto {
+  display: grid;
+  grid-area: resto;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 900px;
+  height: 500px; }
+  .medios .resto img {
     width: 900px;
     height: 500px; }
-    .medios .resto img {
-      width: 900px;
-      height: 500px; }
-  .medios .textos {
-    display: grid;
-    grid-area: textos;
+
+.medios .textos {
+  display: grid;
+  grid-area: textos;
+  flex-direction: column;
+  justify-content: flex-end;
+  grid-area: textos;
+  color: white;
+  background-color: cornflowerblue;
+  width: 830px;
+  height: 500px; }
+  .medios .textos h2 {
+    display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    grid-area: textos;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
     color: white;
-    background-color: cornflowerblue;
-    width: 830px;
-    height: 500px; }
-    .medios .textos h2 {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      font-family: 'Roboto', sans-serif;
-      margin-top: 30px;
-      color: white;
-      font-size: 30px;
-      font-weight: 40px; }
-    .medios .textos h4 {
-      display: flex;
-      flex-direction: column;
-      font-size: 20px;
-      font-weight: 20px;
-      font-family: 'Rubik Distressed', cursive;
-      margin: 20px;
-      padding-right: 40px; }
-  .medios .container.col-md-6 {
-    width: 700px;
-    height: 500px; }
-  .medios .caroussel {
-    display: grid;
-    grid-area: caroussel;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: 500px;
-    padding: 20px; }
+    font-size: 30px;
+    font-weight: 40px; }
+  .medios .textos h4 {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 20px;
+    font-family: 'Rubik Distressed', cursive;
+    margin: 20px;
+    padding-right: 40px; }
+
+.medios .container.col-md-6 {
+  width: 700px;
+  height: 500px; }
+
+.medios .caroussel {
+  display: grid;
+  grid-area: caroussel;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  padding: 20px; }
 
 footer.pie .pie {
   grid-area: pie;
